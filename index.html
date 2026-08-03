@@ -3,98 +3,168 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Transforma tu pyme en 14 días: automatización de ventas, eficiencia operativa y control total. Prueba sin riesgo con Axioma/Dx.">
     <title>Transformación Digital en 14 Días | Axioma/Dx</title>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:700,400&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Montserrat', Arial, sans-serif; margin: 0; background: #f7f7f7; color: #222; }
-        header { background: #1a237e; color: #fff; padding: 40px 0 20px 0; text-align: center; }
-        header h1 { margin: 0 0 10px 0; font-size: 2.5em; }
-        header p { font-size: 1.2em; margin-bottom: 15px; }
-        nav { background: #283593; padding: 10px 0; text-align: center; }
-        nav a { color: #fff; margin: 0 15px; text-decoration: none; font-weight: bold; }
-        section { max-width: 900px; margin: 30px auto; background: #fff; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.06); padding: 32px 24px; }
-        h2 { color: #1a237e; margin-top: 0; }
-        .benefits { display: flex; justify-content: space-between; margin-bottom: 30px; }
-        .benefit { flex: 1; margin: 0 10px; background: #e8eaf6; border-radius: 6px; padding: 18px; text-align: center; }
-        .cta-btn { display: block; width: 100%; max-width: 320px; margin: 30px auto 0 auto; background: #43a047; color: #fff; padding: 16px; font-size: 1.2em; border: none; border-radius: 6px; cursor: pointer; font-weight: bold; transition: background 0.2s; }
-        .cta-btn:hover { background: #388e3c; }
-        .steps { margin: 30px 0; }
-        .steps li { margin-bottom: 10px; }
-        .testimonials { background: #f1f8e9; border-radius: 6px; padding: 20px; margin-top: 30px; }
-        .testimonial { margin-bottom: 18px; }
-        .testimonial:last-child { margin-bottom: 0; }
-        .contact-form { margin-top: 30px; }
-        .contact-form label { display: block; margin-bottom: 6px; font-weight: bold; }
-        .contact-form input, .contact-form textarea { width: 100%; padding: 10px; margin-bottom: 14px; border-radius: 4px; border: 1px solid #bdbdbd; }
-        .contact-form button { background: #1a237e; color: #fff; padding: 12px 22px; border: none; border-radius: 4px; font-size: 1em; cursor: pointer; }
-        .contact-form button:hover { background: #3949ab; }
-        footer { background: #1a237e; color: #fff; text-align: center; padding: 18px 0; margin-top: 40px; }
-        @media (max-width: 700px) {
-            .benefits { flex-direction: column; }
-            .benefit { margin: 10px 0; }
+        body { margin:0; background: #f7f9fb; font-family: 'Montserrat', Arial, sans-serif; color: #263238; }
+        header {
+            background: linear-gradient(120deg, #43cea2 0%, #185a9d 100%);
+            color: #fff; text-align: center; padding: 70px 20px 50px 20px;
+            background-image: url('https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=1200&q=80');
+            background-size: cover; background-position: center;
+            box-shadow: 0 8px 32px rgba(24,90,157,0.15);
+        }
+        header h1 { font-size: 2.8em; margin-bottom: 10px; text-shadow: 0 2px 8px rgba(0,0,0,0.15);}
+        header p { font-size: 1.3em; margin-bottom: 25px; text-shadow: 0 1px 6px rgba(0,0,0,0.12);}
+        .cta-btn {
+            background: #ff9800; color: #fff; padding: 18px 40px; font-size: 1.2em; font-weight: bold;
+            border: none; border-radius: 30px; box-shadow: 0 4px 24px rgba(255,152,0,0.18);
+            cursor: pointer; margin-top: 15px; transition: background 0.2s, transform 0.2s;
+            animation: pulse 1.5s infinite;
+        }
+        .cta-btn:hover { background: #fb8c00; transform: scale(1.05);}
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(255,152,0,0.4);}
+            70% { box-shadow: 0 0 0 15px rgba(255,152,0,0);}
+            100% { box-shadow: 0 0 0 0 rgba(255,152,0,0);}
+        }
+        .section { max-width: 1100px; margin: 40px auto; background: #fff; border-radius: 18px; box-shadow: 0 4px 24px rgba(24,90,157,0.07); padding: 40px 24px;}
+        .benefits { display: flex; flex-wrap: wrap; justify-content: space-around; gap: 24px; margin: 40px 0 0 0;}
+        .benefit-card {
+            flex: 1 1 260px; background: linear-gradient(120deg, #e0f7fa 0%, #fffde7 100%);
+            border-radius: 14px; padding: 32px 20px; text-align: center; box-shadow: 0 2px 12px rgba(33,150,243,0.08);
+            transition: transform 0.18s;
+        }
+        .benefit-card:hover { transform: translateY(-8px) scale(1.04);}
+        .benefit-icon { font-size: 2.5em; margin-bottom: 10px; }
+        .benefit-title { font-size: 1.2em; font-weight: bold; color: #185a9d; margin-bottom: 8px;}
+        .steps { display: flex; flex-wrap: wrap; gap: 24px; margin: 30px 0;}
+        .step-card {
+            flex: 1 1 220px; background: #f3e5f5; border-radius: 14px; padding: 26px 18px; text-align: center;
+            box-shadow: 0 2px 12px rgba(156,39,176,0.08); margin-bottom: 10px;
+            transition: box-shadow 0.18s;
+        }
+        .step-card:hover { box-shadow: 0 6px 24px rgba(156,39,176,0.17);}
+        .step-icon { font-size: 2.2em; margin-bottom: 10px; color: #8e24aa;}
+        .step-title { font-weight: bold; color: #6d1b7b; margin-bottom: 6px;}
+        .metrics { display: flex; justify-content: space-around; margin: 35px 0;}
+        .metric { background: #fff3e0; border-radius: 10px; padding: 24px 18px; text-align: center; box-shadow: 0 2px 10px rgba(255,152,0,0.07);}
+        .metric-num { font-size: 2em; font-weight: bold; color: #ff9800;}
+        .metric-label { font-size: 1em; color: #795548;}
+        .testimonials { display: flex; flex-wrap: wrap; gap: 24px; margin-top: 30px;}
+        .testimonial-card {
+            flex: 1 1 300px; background: #e3f2fd; border-radius: 12px; padding: 22px 18px; box-shadow: 0 2px 10px rgba(33,150,243,0.07);
+            display: flex; align-items: center; gap: 16px;
+        }
+        .testimonial-img { width: 54px; height: 54px; border-radius: 50%; object-fit: cover; border: 3px solid #fff;}
+        .testimonial-content { font-size: 1em;}
+        .testimonial-name { font-weight: bold; color: #185a9d;}
+        .logos { display: flex; justify-content: center; gap: 28px; margin: 30px 0 0 0;}
+        .logos img { height: 42px; filter: grayscale(1) brightness(0.7);}
+        @media (max-width: 900px) {
+            .benefits, .steps, .testimonials { flex-direction: column; }
+            .metrics { flex-direction: column; gap: 20px;}
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Transforma tu Pyme en 14 Días</h1>
-        <p>Automatización de ventas, eficiencia operativa y control total.<br>
-        Prueba sin riesgo con nuestro programa de transformación digital.</p>
+        <h1>¡Impulsa tu Pyme en 14 Días!</h1>
+        <p>Automatiza ventas, libera tu tiempo y controla tu negocio con tecnología de última generación.</p>
         <button class="cta-btn" onclick="document.getElementById('contacto').scrollIntoView({behavior:'smooth'})">
-            Solicita tu Diagnóstico Gratuito
+            Quiero mi Diagnóstico Gratis
         </button>
     </header>
-    <nav>
-        <a href="#como-funciona">¿Cómo Funciona?</a>
-        <a href="#beneficios">Beneficios</a>
-        <a href="#testimonios">Testimonios</a>
-        <a href="#contacto">Contacto</a>
-    </nav>
-    <section id="como-funciona">
-        <h2>¿Cómo Funciona el Programa?</h2>
-        <ol class="steps">
-            <li><b>Día 1-2:</b> Diagnóstico personalizado de tus procesos y ventas.</li>
-            <li><b>Día 3-7:</b> Configuración de CRM, automatización de WhatsApp y embudos de ventas.</li>
-            <li><b>Día 8-14:</b> Prueba real con tu equipo, ajustes y optimización.</li>
-            <li><b>Final:</b> Presentación de resultados y plan de mejora continua.</li>
-        </ol>
-        <button class="cta-btn" onclick="document.getElementById('contacto').scrollIntoView({behavior:'smooth'})">
-            Agenda tu Sesión Inicial
-        </button>
-    </section>
-    <section id="beneficios">
-        <h2>Beneficios Clave</h2>
+
+    <div class="section">
+        <div class="logos">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Microsoft">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" alt="IBM">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Logo_Televisa_2022.svg" alt="Televisa">
+        </div>
+        <h2 style="text-align:center; margin-top:30px;">Beneficios que te Sorprenderán</h2>
         <div class="benefits">
-            <div class="benefit">
-                <h3>+30% Leads Calificados</h3>
-                <p>Automatiza la captación y seguimiento de prospectos sin perder oportunidades.</p>
+            <div class="benefit-card">
+                <div class="benefit-icon">🚀</div>
+                <div class="benefit-title">Más Ventas</div>
+                <div>Responde en segundos y convierte más prospectos en clientes.</div>
             </div>
-            <div class="benefit">
-                <h3>+25% Eficiencia Operativa</h3>
-                <p>Reduce tareas manuales y elimina cuellos de botella en tu operación diaria.</p>
+            <div class="benefit-card">
+                <div class="benefit-icon">🤖</div>
+                <div class="benefit-title">Automatización Real</div>
+                <div>Tu equipo se enfoca en lo importante, la tecnología hace el resto.</div>
             </div>
-            <div class="benefit">
-                <h3>Visibilidad 360°</h3>
-                <p>Monitorea tu operación y ventas en tiempo real desde cualquier dispositivo.</p>
+            <div class="benefit-card">
+                <div class="benefit-icon">📊</div>
+                <div class="benefit-title">Control Total</div>
+                <div>Visualiza todo tu embudo y toma decisiones con datos reales.</div>
             </div>
         </div>
-    </section>
-    <section id="testimonios">
-        <h2>Testimonios de Clientes</h2>
+    </div>
+
+    <div class="section">
+        <h2 style="text-align:center;">¿Cómo Funciona?</h2>
+        <div class="steps">
+            <div class="step-card">
+                <div class="step-icon">🔍</div>
+                <div class="step-title">Diagnóstico Express</div>
+                <div>Analizamos tu proceso y detectamos oportunidades en minutos.</div>
+            </div>
+            <div class="step-card">
+                <div class="step-icon">⚡</div>
+                <div class="step-title">Implementación Ágil</div>
+                <div>Configuramos tu CRM, WhatsApp y bots en menos de una semana.</div>
+            </div>
+            <div class="step-card">
+                <div class="step-icon">🧠</div>
+                <div class="step-title">IA y Automatización</div>
+                <div>Automatiza respuestas, seguimientos y reportes 24/7.</div>
+            </div>
+            <div class="step-card">
+                <div class="step-icon">🏆</div>
+                <div class="step-title">Resultados Medibles</div>
+                <div>Recibe reportes claros y recomendaciones para crecer.</div>
+            </div>
+        </div>
+        <div class="metrics">
+            <div class="metric">
+                <div class="metric-num">+30%</div>
+                <div class="metric-label">Ventas en 1 mes</div>
+            </div>
+            <div class="metric">
+                <div class="metric-num">-70%</div>
+                <div class="metric-label">Tareas manuales</div>
+            </div>
+            <div class="metric">
+                <div class="metric-num">100%</div>
+                <div class="metric-label">Control de leads</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2 style="text-align:center;">Lo que Dicen Nuestros Clientes</h2>
         <div class="testimonials">
-            <div class="testimonial">
-                <b>“En solo dos semanas, nuestro equipo comercial duplicó la tasa de cierre y ahora tenemos todo bajo control.”</b><br>
-                <i>- Laura M., Directora de Operaciones, Pyme de Servicios</i>
+            <div class="testimonial-card">
+                <img class="testimonial-img" src="https://randomuser.me/api/portraits/women/44.jpg" alt="Laura">
+                <div class="testimonial-content">
+                    <div>“Duplicamos ventas y ahora todo el equipo sabe qué hacer. ¡El cambio fue inmediato!”</div>
+                    <div class="testimonial-name">Laura M., Servicios</div>
+                </div>
             </div>
-            <div class="testimonial">
-                <b>“La automatización de WhatsApp y el CRM nos ahorró horas de trabajo y mejoró la experiencia de nuestros clientes.”</b><br>
-                <i>- Carlos G., CEO, Empresa de Distribución</i>
+            <div class="testimonial-card">
+                <img class="testimonial-img" src="https://randomuser.me/api/portraits/men/32.jpg" alt="Carlos">
+                <div class="testimonial-content">
+                    <div>“La automatización de WhatsApp nos ahorró horas y mejoró la experiencia del cliente.”</div>
+                    <div class="testimonial-name">Carlos G., Distribución</div>
+                </div>
             </div>
         </div>
-    </section>
-    <section id="contacto">
-        <h2>Solicita tu Diagnóstico Gratuito</h2>
+    </div>
+
+    <div class="section" id="contacto">
+        <h2 style="text-align:center;">¡Solicita tu Diagnóstico Gratis!</h2>
         <form class="contact-form" action="mailto:tuemail@dominio.com" method="POST" enctype="text/plain">
             <label for="nombre">Nombre</label>
             <input type="text" id="nombre" name="nombre" required>
@@ -106,10 +176,7 @@
             <textarea id="mensaje" name="mensaje" rows="3"></textarea>
             <button type="submit">Enviar Solicitud</button>
         </form>
-        <p style="margin-top:10px;">O contáctanos directo por <a href="https://wa.me/5219999999999" style="color:#43a047;font-weight:bold;">WhatsApp</a></p>
-    </section>
-    <footer>
-        &copy; 2026 Axioma/Dx | Consultoría en Transformación Digital para Pymes | Mérida, México
-    </footer>
+        <p style="text-align:center; margin-top:10px;">O escríbenos directo por <a href="https://wa.me/5219999999999" style="color:#43a047;font-weight:bold;">WhatsApp</a></p>
+    </div>
 </body>
 </html>
