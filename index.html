@@ -1,115 +1,1325 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Transforma tu pyme en 14 días: automatización de ventas, eficiencia operativa y control total. Prueba sin riesgo con Axioma/Dx.">
-    <title>Transformación Digital en 14 Días | Axioma/Dx</title>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
-    <style>
-        body { font-family: 'Montserrat', Arial, sans-serif; margin: 0; background: #f7f7f7; color: #222; }
-        header { background: #1a237e; color: #fff; padding: 40px 0 20px 0; text-align: center; }
-        header h1 { margin: 0 0 10px 0; font-size: 2.5em; }
-        header p { font-size: 1.2em; margin-bottom: 15px; }
-        nav { background: #283593; padding: 10px 0; text-align: center; }
-        nav a { color: #fff; margin: 0 15px; text-decoration: none; font-weight: bold; }
-        section { max-width: 900px; margin: 30px auto; background: #fff; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.06); padding: 32px 24px; }
-        h2 { color: #1a237e; margin-top: 0; }
-        .benefits { display: flex; justify-content: space-between; margin-bottom: 30px; }
-        .benefit { flex: 1; margin: 0 10px; background: #e8eaf6; border-radius: 6px; padding: 18px; text-align: center; }
-        .cta-btn { display: block; width: 100%; max-width: 320px; margin: 30px auto 0 auto; background: #43a047; color: #fff; padding: 16px; font-size: 1.2em; border: none; border-radius: 6px; cursor: pointer; font-weight: bold; transition: background 0.2s; }
-        .cta-btn:hover { background: #388e3c; }
-        .steps { margin: 30px 0; }
-        .steps li { margin-bottom: 10px; }
-        .testimonials { background: #f1f8e9; border-radius: 6px; padding: 20px; margin-top: 30px; }
-        .testimonial { margin-bottom: 18px; }
-        .testimonial:last-child { margin-bottom: 0; }
-        .contact-form { margin-top: 30px; }
-        .contact-form label { display: block; margin-bottom: 6px; font-weight: bold; }
-        .contact-form input, .contact-form textarea { width: 100%; padding: 10px; margin-bottom: 14px; border-radius: 4px; border: 1px solid #bdbdbd; }
-        .contact-form button { background: #1a237e; color: #fff; padding: 12px 22px; border: none; border-radius: 4px; font-size: 1em; cursor: pointer; }
-        .contact-form button:hover { background: #3949ab; }
-        footer { background: #1a237e; color: #fff; text-align: center; padding: 18px 0; margin-top: 40px; }
-        @media (max-width: 700px) {
-            .benefits { flex-direction: column; }
-            .benefit { margin: 10px 0; }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Axioma/Dx | CRM, Automatización y Transformación Digital</title>
+  <meta name="description" content="Ayudamos a empresas en crecimiento a ordenar ventas, operación y atención con CRM, automatización y transformación digital."/>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --primary:#2563eb;
+      --primary-dark:#1d4ed8;
+      --navy:#0b1f4d;
+      --navy-2:#102a63;
+      --text:#0f172a;
+      --muted:#64748b;
+      --bg:#f8fafc;
+      --border:#e2e8f0;
+      --white:#ffffff;
+      --shadow:0 10px 30px rgba(2,6,23,.08);
+      --radius:18px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:'Inter',system-ui,-apple-system,sans-serif;
+      color:var(--text);
+      background:#fff;
+      line-height:1.6;
+    }
+
+    .container{
+      width:min(1200px,92%);
+      margin:0 auto;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      gap:.6rem;
+      padding:14px 22px;
+      border-radius:12px;
+      font-weight:600;
+      text-decoration:none;
+      transition:.25s ease;
+      border:1px solid transparent;
+      cursor:pointer;
+    }
+
+    .btn-primary{
+      background:var(--primary);
+      color:#fff;
+      box-shadow:0 8px 20px rgba(37,99,235,.25);
+    }
+    .btn-primary:hover{
+      background:var(--primary-dark);
+      transform:translateY(-2px);
+    }
+
+    .btn-secondary{
+      background:#fff;
+      color:var(--navy);
+      border-color:var(--border);
+    }
+    .btn-secondary:hover{
+      border-color:var(--primary);
+      color:var(--primary);
+    }
+
+    /* Header */
+    header{
+      position:sticky;
+      top:0;
+      z-index:1000;
+      background:rgba(255,255,255,.9);
+      backdrop-filter:blur(12px);
+      border-bottom:1px solid var(--border);
+    }
+
+    .nav{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      height:76px;
+      gap:1rem;
+    }
+
+    .logo{
+      font-size:1.5rem;
+      font-weight:800;
+      color:var(--navy);
+      text-decoration:none;
+    }
+
+    .logo span{color:var(--primary)}
+
+    .nav-links{
+      display:flex;
+      gap:1.5rem;
+      align-items:center;
+    }
+
+    .nav-links a{
+      color:var(--text);
+      text-decoration:none;
+      font-weight:500;
+      font-size:.95rem;
+    }
+
+    .nav-links a:hover{color:var(--primary)}
+
+    .nav > .btn{display:inline-flex}
+
+    .menu-btn{
+      display:none;
+      background:none;
+      border:none;
+      font-size:1.5rem;
+      cursor:pointer;
+    }
+
+    .mobile-cta{display:none}
+
+    /* Hero */
+    .hero{
+      position:relative;
+      overflow:hidden;
+      background:
+        radial-gradient(circle at 20% 20%, rgba(37,99,235,.12), transparent 35%),
+        linear-gradient(180deg, #fff 0%, #f8fbff 100%);
+    }
+
+    .hero-grid{
+      display:grid;
+      grid-template-columns:1.1fr .9fr;
+      gap:3rem;
+      align-items:center;
+      padding:88px 0 72px;
+    }
+
+    .hero h1{
+      font-size:clamp(2.4rem,5vw,4.5rem);
+      line-height:1.05;
+      margin:0 0 1.25rem;
+      letter-spacing:-.04em;
+    }
+
+    .hero h1 .accent{color:var(--primary)}
+
+    .hero p{
+      font-size:1.15rem;
+      color:var(--muted);
+      max-width:620px;
+      margin-bottom:2rem;
+    }
+
+    .hero-actions{
+      display:flex;
+      gap:1rem;
+      flex-wrap:wrap;
+      margin-bottom:2.5rem;
+    }
+
+    .hero-metrics{
+      display:flex;
+      gap:1.5rem;
+      flex-wrap:wrap;
+    }
+
+    .metric{
+      display:flex;
+      align-items:center;
+      gap:.75rem;
+      background:#fff;
+      border:1px solid var(--border);
+      padding:14px 16px;
+      border-radius:14px;
+      box-shadow:var(--shadow);
+      min-width:190px;
+    }
+
+    .metric .icon{
+      width:42px;height:42px;border-radius:12px;
+      display:grid;place-items:center;
+      background:rgba(37,99,235,.1);
+      color:var(--primary);
+      font-size:1.2rem;
+      font-weight:700;
+    }
+
+    .metric strong{display:block;font-size:.95rem}
+    .metric span{display:block;font-size:.8rem;color:var(--muted)}
+
+    .hero-visual{
+      position:relative;
+    }
+
+    .hero-card{
+      background:#fff;
+      border:1px solid var(--border);
+      border-radius:28px;
+      padding:22px;
+      box-shadow:0 30px 60px rgba(15,23,42,.12);
+    }
+
+    .dashboard{
+      background:linear-gradient(180deg,var(--navy),#102a63);
+      border-radius:22px;
+      padding:22px;
+      color:#fff;
+      min-height:420px;
+      display:flex;
+      flex-direction:column;
+      gap:18px;
+    }
+
+    .dashboard-top{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      opacity:.9;
+      font-size:.9rem;
+    }
+
+    .chart{
+      flex:1;
+      background:rgba(255,255,255,.06);
+      border:1px solid rgba(255,255,255,.08);
+      border-radius:18px;
+      padding:18px;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .bars{
+      position:absolute;
+      inset:auto 18px 18px 18px;
+      height:160px;
+      display:flex;
+      align-items:flex-end;
+      gap:12px;
+    }
+
+    .bar{
+      flex:1;
+      background:linear-gradient(180deg,#60a5fa,#2563eb);
+      border-radius:10px 10px 4px 4px;
+      animation:grow 1.2s ease both;
+    }
+
+    .bar:nth-child(1){height:38%}
+    .bar:nth-child(2){height:58%}
+    .bar:nth-child(3){height:72%}
+    .bar:nth-child(4){height:52%}
+    .bar:nth-child(5){height:88%}
+    .bar:nth-child(6){height:96%}
+
+    @keyframes grow{
+      from{height:0}
+    }
+
+    .mini-cards{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:12px;
+    }
+
+    .mini{
+      background:rgba(255,255,255,.08);
+      border:1px solid rgba(255,255,255,.08);
+      border-radius:14px;
+      padding:14px;
+    }
+
+    .mini strong{
+      display:block;
+      font-size:1.1rem;
+      margin-bottom:4px;
+    }
+
+    .mini span{
+      font-size:.8rem;
+      opacity:.8;
+    }
+
+    /* Sections */
+    section{
+      padding:88px 0;
+    }
+
+    .section-head{
+      text-align:center;
+      max-width:760px;
+      margin:0 auto 3.5rem;
+    }
+
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:.5rem;
+      padding:8px 14px;
+      border-radius:999px;
+      background:rgba(37,99,235,.08);
+      color:var(--primary);
+      font-weight:700;
+      font-size:.8rem;
+      letter-spacing:.04em;
+      text-transform:uppercase;
+      margin-bottom:1rem;
+    }
+
+    .section-head h2{
+      font-size:clamp(2rem,4vw,3rem);
+      line-height:1.1;
+      margin:0 0 1rem;
+      letter-spacing:-.03em;
+    }
+
+    .section-head p{
+      color:var(--muted);
+      font-size:1.05rem;
+      margin:0;
+    }
+
+    /* Problems */
+    .cards-3{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:1.5rem;
+    }
+
+    .card{
+      background:#fff;
+      border:1px solid var(--border);
+      border-radius:22px;
+      padding:28px;
+      box-shadow:var(--shadow);
+      transition:.25s ease;
+    }
+
+    .card:hover{
+      transform:translateY(-6px);
+      border-color:rgba(37,99,235,.35);
+    }
+
+    .card-icon{
+      width:56px;height:56px;border-radius:16px;
+      display:grid;place-items:center;
+      background:rgba(37,99,235,.1);
+      color:var(--primary);
+      font-size:1.5rem;
+      margin-bottom:1.25rem;
+    }
+
+    .card h3{
+      margin:0 0 .75rem;
+      font-size:1.2rem;
+    }
+
+    .card p{
+      margin:0;
+      color:var(--muted);
+    }
+
+    /* Results */
+    .results{
+      background:linear-gradient(180deg,var(--navy),#102a63);
+      color:#fff;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .results::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:radial-gradient(circle at 10% 20%, rgba(96,165,250,.18), transparent 28%);
+    }
+
+    .results .section-head p{color:rgba(255,255,255,.78)}
+
+    .stats{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:1.25rem;
+      position:relative;
+      z-index:1;
+    }
+
+    .stat{
+      background:rgba(255,255,255,.06);
+      border:1px solid rgba(255,255,255,.08);
+      border-radius:22px;
+      padding:28px;
+      backdrop-filter:blur(8px);
+    }
+
+    .stat .num{
+      font-size:2.2rem;
+      font-weight:800;
+      margin-bottom:.35rem;
+    }
+
+    .stat p{
+      margin:0;
+      color:rgba(255,255,255,.78);
+    }
+
+    /* Services */
+    .services{
+      background:var(--bg);
+    }
+
+    .services-grid{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:1.5rem;
+    }
+
+    .service{
+      background:#fff;
+      border:1px solid var(--border);
+      border-radius:24px;
+      padding:30px;
+      box-shadow:var(--shadow);
+      display:flex;
+      flex-direction:column;
+      gap:1rem;
+      transition:.25s ease;
+    }
+
+    .service:hover{
+      transform:translateY(-6px);
+      border-color:rgba(37,99,235,.35);
+    }
+
+    .service-top{
+      display:flex;
+      align-items:center;
+      gap:1rem;
+    }
+
+    .service h3{
+      margin:0;
+      font-size:1.25rem;
+    }
+
+    .service p{
+      margin:0;
+      color:var(--muted);
+    }
+
+    .service a{
+      color:var(--primary);
+      text-decoration:none;
+      font-weight:600;
+      margin-top:auto;
+    }
+
+    /* Case */
+    .case-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:2rem;
+      align-items:stretch;
+    }
+
+    .case-card{
+      background:#fff;
+      border:1px solid var(--border);
+      border-radius:28px;
+      padding:34px;
+      box-shadow:var(--shadow);
+    }
+
+    .case-card h3{
+      margin:.5rem 0 1rem;
+      font-size:1.8rem;
+      line-height:1.15;
+    }
+
+    .case-card p{
+      color:var(--muted);
+    }
+
+    .case-metrics{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:1rem;
+      margin:2rem 0;
+    }
+
+    .case-metrics .item{
+      padding:16px;
+      border-radius:18px;
+      background:var(--bg);
+      text-align:center;
+    }
+
+    .case-metrics strong{
+      display:block;
+      font-size:1.35rem;
+      color:var(--navy);
+    }
+
+    .quote{
+      background:linear-gradient(180deg,var(--navy),#102a63);
+      color:#fff;
+      border-radius:28px;
+      padding:34px;
+      position:relative;
+      overflow:hidden;
+      box-shadow:var(--shadow);
+    }
+
+    .quote::before{
+      content:"“";
+      position:absolute;
+      top:-10px;
+      left:24px;
+      font-size:7rem;
+      color:rgba(255,255,255,.08);
+      line-height:1;
+    }
+
+    .quote p{
+      font-size:1.1rem;
+      line-height:1.7;
+      position:relative;
+      z-index:1;
+    }
+
+    .author{
+      display:flex;
+      align-items:center;
+      gap:1rem;
+      margin-top:2rem;
+    }
+
+    .avatar{
+      width:54px;height:54px;border-radius:50%;
+      background:linear-gradient(135deg,#60a5fa,#2563eb);
+      display:grid;place-items:center;
+      font-weight:700;
+    }
+
+    /* Process */
+    .process{
+      background:var(--bg);
+    }
+
+    .steps{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:1.25rem;
+      position:relative;
+    }
+
+    .step{
+      background:#fff;
+      border:1px solid var(--border);
+      border-radius:24px;
+      padding:28px;
+      box-shadow:var(--shadow);
+      position:relative;
+    }
+
+    .step-num{
+      width:42px;height:42px;border-radius:50%;
+      background:var(--primary);
+      color:#fff;
+      display:grid;place-items:center;
+      font-weight:700;
+      margin-bottom:1rem;
+    }
+
+    .step h4{
+      margin:0 0 .75rem;
+      font-size:1.05rem;
+    }
+
+    .step p{
+      margin:0;
+      color:var(--muted);
+      font-size:.95rem;
+    }
+
+    /* CTA */
+    .cta{
+      background:linear-gradient(135deg,var(--navy),#102a63);
+      color:#fff;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .cta::before{
+      content:"";
+      position:absolute;
+      inset:-30%;
+      background:radial-gradient(circle at 20% 30%, rgba(96,165,250,.16), transparent 24%);
+    }
+
+    .cta-grid{
+      position:relative;
+      z-index:1;
+      display:grid;
+      grid-template-columns:.95fr 1.05fr;
+      gap:2rem;
+      align-items:center;
+    }
+
+    .cta h2{
+      font-size:clamp(2rem,4vw,3rem);
+      line-height:1.08;
+      margin:0 0 1rem;
+      letter-spacing:-.03em;
+    }
+
+    .cta p{
+      color:rgba(255,255,255,.8);
+      margin-bottom:1.75rem;
+    }
+
+    .benefits{
+      display:grid;
+      gap:1rem;
+    }
+
+    .benefit{
+      display:flex;
+      align-items:center;
+      gap:.85rem;
+      color:#fff;
+      font-weight:500;
+    }
+
+    .check{
+      width:28px;height:28px;border-radius:50%;
+      background:rgba(255,255,255,.12);
+      display:grid;place-items:center;
+      font-size:.9rem;
+    }
+
+    .form-card{
+      background:#fff;
+      color:var(--text);
+      border-radius:28px;
+      padding:32px;
+      box-shadow:0 30px 60px rgba(2,6,23,.22);
+    }
+
+    .form-card h3{
+      margin:0 0 1.5rem;
+      font-size:1.5rem;
+    }
+
+    form{
+      display:grid;
+      gap:1rem;
+    }
+
+    .grid-2{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:1rem;
+    }
+
+    input, textarea, select{
+      width:100%;
+      padding:14px 16px;
+      border-radius:14px;
+      border:1px solid var(--border);
+      font:inherit;
+      transition:.2s ease;
+      background:#fff;
+    }
+
+    input:focus, textarea:focus, select:focus{
+      outline:none;
+      border-color:var(--primary);
+      box-shadow:0 0 0 4px rgba(37,99,235,.12);
+    }
+
+    textarea{
+      min-height:120px;
+      resize:vertical;
+    }
+
+    .success{
+      display:none;
+      margin-top:1rem;
+      padding:14px 16px;
+      border-radius:14px;
+      background:#ecfdf5;
+      color:#065f46;
+      border:1px solid #a7f3d0;
+      font-weight:600;
+    }
+
+    /* Footer */
+    footer{
+      background:#07152f;
+      color:#cbd5e1;
+      padding:72px 0 32px;
+    }
+
+    .footer-grid{
+      display:grid;
+      grid-template-columns:1.2fr repeat(3,.8fr) 1fr;
+      gap:2rem;
+      margin-bottom:2.5rem;
+    }
+
+    .footer-brand p{
+      color:#94a3b8;
+      max-width:320px;
+    }
+
+    .footer-col h4{
+      color:#fff;
+      margin:0 0 1rem;
+      font-size:1rem;
+    }
+
+    .footer-col a{
+      display:block;
+      color:#94a3b8;
+      text-decoration:none;
+      margin:.6rem 0;
+    }
+
+    .footer-col a:hover{color:#fff}
+
+    .socials{
+      display:flex;
+      gap:.75rem;
+      margin-top:1rem;
+    }
+
+    .social{
+      width:40px;height:40px;border-radius:12px;
+      display:grid;place-items:center;
+      background:rgba(255,255,255,.06);
+      color:#fff;
+      text-decoration:none;
+    }
+
+    .footer-bottom{
+      border-top:1px solid rgba(255,255,255,.08);
+      padding-top:1.5rem;
+      display:flex;
+      justify-content:space-between;
+      gap:1rem;
+      flex-wrap:wrap;
+      font-size:.9rem;
+      color:#94a3b8;
+    }
+
+    /* Responsive */
+    @media (max-width: 1024px){
+      .hero-grid,
+      .case-grid,
+      .cta-grid{
+        grid-template-columns:1fr;
+      }
+
+      .stats,
+      .steps{
+        grid-template-columns:repeat(2,1fr);
+      }
+
+      .footer-grid{
+        grid-template-columns:repeat(2,1fr);
+      }
+    }
+
+    @media (max-width: 768px){
+      .nav-links{
+        position:fixed;
+        inset:76px 0 auto 0;
+        background:#fff;
+        border-bottom:1px solid var(--border);
+        padding:1rem 1.25rem 1.5rem;
+        flex-direction:column;
+        align-items:flex-start;
+        transform:translateY(-120%);
+        transition:.25s ease;
+        box-shadow:0 12px 24px rgba(15,23,42,.08);
+      }
+
+      .nav-links.active{
+        transform:translateY(0);
+      }
+
+      .menu-btn{display:block}
+      .mobile-cta{display:inline-flex;padding:10px 14px;font-size:.9rem}
+      .nav > .btn:not(.mobile-cta){display:none}
+
+
+      .cards-3,
+      .services-grid,
+      .stats,
+      .steps,
+      .grid-2,
+      .case-metrics,
+      .footer-grid{
+        grid-template-columns:1fr;
+      }
+
+      section{padding:72px 0}
+
+      .hero-grid{padding:72px 0 56px}
+
+      .hero-metrics{flex-direction:column}
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Transforma tu Pyme en 14 Días</h1>
-        <p>Automatización de ventas, eficiencia operativa y control total.<br>
-        Prueba sin riesgo con nuestro programa de transformación digital.</p>
-        <button class="cta-btn" onclick="document.getElementById('contacto').scrollIntoView({behavior:'smooth'})">
-            Solicita tu Diagnóstico Gratuito
-        </button>
-    </header>
-    <nav>
-        <a href="#como-funciona">¿Cómo Funciona?</a>
-        <a href="#beneficios">Beneficios</a>
-        <a href="#testimonios">Testimonios</a>
+
+  <header>
+    <div class="container nav">
+      <a href="#" class="logo">Axioma<span>/Dx</span></a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#inicio">Inicio</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#casos">Casos de éxito</a>
+        <a href="#proceso">Proceso</a>
         <a href="#contacto">Contacto</a>
-    </nav>
-    <section id="como-funciona">
-        <h2>¿Cómo Funciona el Programa?</h2>
-        <ol class="steps">
-            <li><b>Día 1-2:</b> Diagnóstico personalizado de tus procesos y ventas.</li>
-            <li><b>Día 3-7:</b> Configuración de CRM, automatización de WhatsApp y embudos de ventas.</li>
-            <li><b>Día 8-14:</b> Prueba real con tu equipo, ajustes y optimización.</li>
-            <li><b>Final:</b> Presentación de resultados y plan de mejora continua.</li>
-        </ol>
-        <button class="cta-btn" onclick="document.getElementById('contacto').scrollIntoView({behavior:'smooth'})">
-            Agenda tu Sesión Inicial
-        </button>
-    </section>
-    <section id="beneficios">
-        <h2>Beneficios Clave</h2>
-        <div class="benefits">
-            <div class="benefit">
-                <h3>+30% Leads Calificados</h3>
-                <p>Automatiza la captación y seguimiento de prospectos sin perder oportunidades.</p>
+      </nav>
+
+      <a href="#contacto" class="btn btn-primary">Solicita tu diagnóstico</a>
+
+      <a href="#contacto" class="btn btn-primary mobile-cta">Diagnóstico</a>
+
+      <button class="menu-btn" id="menuBtn">☰</button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero" id="inicio">
+      <div class="container hero-grid">
+
+        <div>
+          <div class="eyebrow">CRM • Automatización • Transformación digital</div>
+
+          <h1>
+            Transformamos operación, ventas y seguimiento comercial con
+            <span class="accent">CRM y automatización</span>
+          </h1>
+
+          <p>
+            Ayudamos a empresas en crecimiento a ordenar procesos, acelerar respuestas y convertir más oportunidades en resultados medibles.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#contacto" class="btn btn-primary">Solicita tu diagnóstico →</a>
+            <a href="#casos" class="btn btn-secondary">Ver casos de éxito</a>
+          </div>
+
+          <div class="hero-metrics">
+            <div class="metric">
+              <div class="icon">✓</div>
+              <div>
+                <strong>+50 proyectos</strong>
+                <span>Implementados con éxito</span>
+              </div>
             </div>
-            <div class="benefit">
-                <h3>+25% Eficiencia Operativa</h3>
-                <p>Reduce tareas manuales y elimina cuellos de botella en tu operación diaria.</p>
+
+            <div class="metric">
+              <div class="icon">⚡</div>
+              <div>
+                <strong>Equipos certificados</strong>
+                <span>CRM y automatización</span>
+              </div>
             </div>
-            <div class="benefit">
-                <h3>Visibilidad 360°</h3>
-                <p>Monitorea tu operación y ventas en tiempo real desde cualquier dispositivo.</p>
+
+            <div class="metric">
+              <div class="icon">📈</div>
+              <div>
+                <strong>Metodología probada</strong>
+                <span>Enfocada en resultados</span>
+              </div>
             </div>
+          </div>
         </div>
-    </section>
-    <section id="testimonios">
-        <h2>Testimonios de Clientes</h2>
-        <div class="testimonials">
-            <div class="testimonial">
-                <b>“En solo dos semanas, nuestro equipo comercial duplicó la tasa de cierre y ahora tenemos todo bajo control.”</b><br>
-                <i>- Laura M., Directora de Operaciones, Pyme de Servicios</i>
+
+        <div class="hero-visual">
+          <div class="hero-card">
+            <div class="dashboard">
+
+              <div class="dashboard-top">
+                <span>Pipeline comercial</span>
+                <span>Últimos 30 días</span>
+              </div>
+
+              <div class="chart">
+                <div style="font-size:2rem;font-weight:800;">+38%</div>
+                <div style="opacity:.75;margin-top:.25rem;">Conversión de oportunidades</div>
+
+                <div class="bars">
+                  <div class="bar"></div>
+                  <div class="bar"></div>
+                  <div class="bar"></div>
+                  <div class="bar"></div>
+                  <div class="bar"></div>
+                  <div class="bar"></div>
+                </div>
+              </div>
+
+              <div class="mini-cards">
+                <div class="mini">
+                  <strong>42h</strong>
+                  <span>Tiempo ahorrado</span>
+                </div>
+                <div class="mini">
+                  <strong>95%</strong>
+                  <span>Seguimiento</span>
+                </div>
+                <div class="mini">
+                  <strong>3.2x</strong>
+                  <span>ROI estimado</span>
+                </div>
+              </div>
+
             </div>
-            <div class="testimonial">
-                <b>“La automatización de WhatsApp y el CRM nos ahorró horas de trabajo y mejoró la experiencia de nuestros clientes.”</b><br>
-                <i>- Carlos G., CEO, Empresa de Distribución</i>
-            </div>
+          </div>
         </div>
+
+      </div>
     </section>
-    <section id="contacto">
-        <h2>Solicita tu Diagnóstico Gratuito</h2>
-        <form class="contact-form" action="mailto:tuemail@dominio.com" method="POST" enctype="text/plain">
-            <label for="nombre">Nombre</label>
-            <input type="text" id="nombre" name="nombre" required>
-            <label for="empresa">Empresa</label>
-            <input type="text" id="empresa" name="empresa" required>
-            <label for="correo">Correo electrónico</label>
-            <input type="email" id="correo" name="correo" required>
-            <label for="mensaje">¿Qué te gustaría mejorar?</label>
-            <textarea id="mensaje" name="mensaje" rows="3"></textarea>
-            <button type="submit">Enviar Solicitud</button>
-        </form>
-        <p style="margin-top:10px;">O contáctanos directo por <a href="https://wa.me/5219999999999" style="color:#43a047;font-weight:bold;">WhatsApp</a></p>
+
+    <!-- PROBLEMAS -->
+    <section>
+      <div class="container">
+
+        <div class="section-head">
+          <div class="eyebrow">Problemas que resolvemos</div>
+          <h2>Los cuellos de botella que frenan el crecimiento</h2>
+          <p>Identificamos y eliminamos la fricción comercial y operativa que impide escalar con orden.</p>
+        </div>
+
+        <div class="cards-3">
+
+          <article class="card">
+            <div class="card-icon">👥</div>
+            <h3>Leads sin seguimiento</h3>
+            <p>Oportunidades que se pierden por falta de visibilidad, responsables claros y procesos consistentes.</p>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">⏱</div>
+            <h3>Procesos manuales</h3>
+            <p>Tareas repetitivas que consumen tiempo del equipo y retrasan la respuesta al cliente.</p>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">🗂</div>
+            <h3>Información dispersa</h3>
+            <p>Datos distribuidos en múltiples sistemas que dificultan tomar decisiones rápidas y confiables.</p>
+          </article>
+
+        </div>
+      </div>
     </section>
-    <footer>
-        &copy; 2026 Axioma/Dx | Consultoría en Transformación Digital para Pymes | Mérida, México
-    </footer>
+
+    <!-- RESULTADOS -->
+    <section class="results">
+      <div class="container">
+
+        <div class="section-head">
+          <div class="eyebrow">Resultados</div>
+          <h2>Impacto medible en operación y ventas</h2>
+          <p>Convertimos iniciativas digitales en mejoras concretas de productividad, seguimiento y conversión.</p>
+        </div>
+
+        <div class="stats">
+
+          <div class="stat">
+            <div class="num">40%</div>
+            <p>Más productividad operativa</p>
+          </div>
+
+          <div class="stat">
+            <div class="num">30%</div>
+            <p>Más conversión de oportunidades</p>
+          </div>
+
+          <div class="stat">
+            <div class="num">50%</div>
+            <p>Menos tiempo en tareas manuales</p>
+          </div>
+
+          <div class="stat">
+            <div class="num">95%</div>
+            <p>Seguimiento comercial visible</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICIOS -->
+    <section class="services" id="servicios">
+      <div class="container">
+
+        <div class="section-head">
+          <div class="eyebrow">Servicios</div>
+          <h2>Soluciones para crecer con control</h2>
+          <p>Diseñamos e implementamos procesos digitales alineados a objetivos comerciales y operativos.</p>
+        </div>
+
+        <div class="services-grid">
+
+          <article class="service">
+            <div class="service-top">
+              <div class="card-icon" style="margin:0;">🧩</div>
+              <h3>Implementación CRM</h3>
+            </div>
+            <p>Centraliza clientes, oportunidades y seguimiento en una sola plataforma para ganar visibilidad y control comercial.</p>
+            <a href="#contacto">Agenda una llamada →</a>
+          </article>
+
+          <article class="service">
+            <div class="service-top">
+              <div class="card-icon" style="margin:0;">⚙️</div>
+              <h3>Automatización</h3>
+            </div>
+            <p>Elimina tareas repetitivas, acelera respuestas y mejora la productividad del equipo sin aumentar complejidad.</p>
+            <a href="#contacto">Agenda una llamada →</a>
+          </article>
+
+          <article class="service">
+            <div class="service-top">
+              <div class="card-icon" style="margin:0;">📊</div>
+              <h3>Optimización operativa</h3>
+            </div>
+            <p>Diseñamos procesos más eficientes para reducir fricción, errores y tiempos de ejecución entre áreas.</p>
+            <a href="#contacto">Agenda una llamada →</a>
+          </article>
+
+          <article class="service">
+            <div class="service-top">
+              <div class="card-icon" style="margin:0;">🚀</div>
+              <h3>Transformación digital</h3>
+            </div>
+            <p>Integramos tecnología, procesos y estrategia para impulsar crecimiento sostenible y decisiones basadas en datos.</p>
+            <a href="#contacto">Agenda una llamada →</a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CASO -->
+    <section id="casos">
+      <div class="container">
+
+        <div class="section-head">
+          <div class="eyebrow">Caso de éxito</div>
+          <h2>De procesos manuales a resultados medibles</h2>
+          <p>Un ejemplo de cómo un CRM bien implementado puede transformar seguimiento, visibilidad y conversión.</p>
+        </div>
+
+        <div class="case-grid">
+
+          <div class="case-card">
+            <div class="eyebrow">Servicios profesionales</div>
+            <h3>Operación comercial ordenada y escalable</h3>
+            <p>Una empresa de servicios profesionales transformó su operación comercial mediante CRM y automatización de seguimiento.</p>
+
+            <div class="case-metrics">
+              <div class="item">
+                <strong>40%</strong>
+                <span>Menos tiempo de seguimiento</span>
+              </div>
+              <div class="item">
+                <strong>25%</strong>
+                <span>Más conversión</span>
+              </div>
+              <div class="item">
+                <strong>100%</strong>
+                <span>Visibilidad del embudo</span>
+              </div>
+            </div>
+
+            <a href="#contacto" class="btn btn-primary">Quiero resultados similares</a>
+          </div>
+
+          <div class="quote">
+            <p>
+              Axioma/Dx entendió nuestro negocio y construyó un sistema que hoy nos permite crecer de forma ordenada, medir el seguimiento y responder más rápido a nuestros clientes.
+            </p>
+
+            <div class="author">
+              <div class="avatar">JR</div>
+              <div>
+                <strong>Jorge Ramírez</strong><br>
+                <span style="opacity:.8">Director Comercial · Empresa de Servicios Profesionales</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESO -->
+    <section class="process" id="proceso">
+      <div class="container">
+
+        <div class="section-head">
+          <div class="eyebrow">Cómo trabajamos</div>
+          <h2>Un proceso simple y orientado a resultados</h2>
+          <p>Reducimos incertidumbre con una metodología clara desde el diagnóstico hasta la medición del impacto.</p>
+        </div>
+
+        <div class="steps">
+
+          <div class="step">
+            <div class="step-num">1</div>
+            <h4>Diagnóstico</h4>
+            <p>Analizamos situación actual, procesos, herramientas y oportunidades prioritarias.</p>
+          </div>
+
+          <div class="step">
+            <div class="step-num">2</div>
+            <h4>Diseño</h4>
+            <p>Definimos la solución alineada a objetivos comerciales y operativos del negocio.</p>
+          </div>
+
+          <div class="step">
+            <div class="step-num">3</div>
+            <h4>Implementación</h4>
+            <p>Configuramos herramientas, automatizaciones e integramos los procesos necesarios.</p>
+          </div>
+
+          <div class="step">
+            <div class="step-num">4</div>
+            <h4>Medición</h4>
+            <p>Monitoreamos resultados y optimizamos continuamente para mejorar el rendimiento.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta" id="contacto">
+      <div class="container cta-grid">
+
+        <div>
+          <div class="eyebrow" style="background:rgba(255,255,255,.12);color:#fff;">Diagnóstico inicial</div>
+
+          <h2>¿Listo para transformar tus resultados?</h2>
+
+          <p>
+            Solicita un diagnóstico gratuito y descubre cómo ordenar ventas, operación y atención con CRM y automatización.
+          </p>
+
+          <div class="benefits">
+            <div class="benefit"><span class="check">✓</span> Sin costo</div>
+            <div class="benefit"><span class="check">✓</span> Sin compromiso</div>
+            <div class="benefit"><span class="check">✓</span> Enfocado en tus objetivos</div>
+          </div>
+        </div>
+
+        <div class="form-card">
+
+          <h3>Solicita tu diagnóstico</h3>
+
+          <form id="leadForm">
+
+            <div class="grid-2">
+              <input type="text" placeholder="Nombre completo" required>
+              <input type="email" placeholder="Correo corporativo" required>
+            </div>
+
+            <div class="grid-2">
+              <input type="text" placeholder="Empresa" required>
+              <input type="tel" placeholder="Teléfono">
+            </div>
+
+            <select required>
+              <option value="">¿Cuál es tu principal necesidad?</option>
+              <option>Implementar CRM</option>
+              <option>Automatizar procesos</option>
+              <option>Optimizar operación</option>
+              <option>Transformación digital</option>
+              <option>Otro</option>
+            </select>
+
+            <textarea placeholder="Cuéntanos brevemente tu situación o objetivo"></textarea>
+
+            <button type="submit" class="btn btn-primary" style="justify-content:center;">
+              Quiero mi diagnóstico
+            </button>
+
+          </form>
+
+          <div class="success" id="successMessage">
+            ¡Gracias! Hemos recibido tu solicitud y te contactaremos en menos de 24 horas.
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <div class="footer-brand">
+          <a href="#" class="logo" style="color:#fff;">Axioma<span>/Dx</span></a>
+          <p>Consultoría en CRM, automatización y transformación digital para empresas en crecimiento.</p>
+
+          <div class="socials">
+            <a class="social" href="#">in</a>
+            <a class="social" href="#">ig</a>
+            <a class="social" href="#">yt</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Servicios</h4>
+          <a href="#servicios">Implementación CRM</a>
+          <a href="#servicios">Automatización</a>
+          <a href="#servicios">Optimización operativa</a>
+          <a href="#servicios">Transformación digital</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>Empresa</h4>
+          <a href="#casos">Casos de éxito</a>
+          <a href="#proceso">Cómo trabajamos</a>
+          <a href="#contacto">Contacto</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>Recursos</h4>
+          <a href="#">Guías</a>
+          <a href="#">Checklists</a>
+          <a href="#">Webinars</a>
+          <a href="#">Blog</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>Hablemos</h4>
+          <a href="mailto:hola@axiomadx.com">hola@axiomadx.com</a>
+          <a href="tel:+529991234567">+52 999 123 4567</a>
+          <a href="#">Mérida, Yucatán</a>
+          <div style="margin-top:1rem;">
+            <a href="#contacto" class="btn btn-primary" style="padding:12px 16px;">Agenda una llamada</a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 Axioma/Dx. Todos los derechos reservados.</span>
+        <span>Aviso de privacidad · Términos y condiciones</span>
+      </div>
+
+    </div>
+  </footer>
+
+  <script>
+    // Menú móvil
+    const menuBtn = document.getElementById('menuBtn');
+    const navLinks = document.getElementById('navLinks');
+
+    menuBtn.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => navLinks.classList.remove('active'));
+    });
+
+    // Formulario demo
+    const form = document.getElementById('leadForm');
+    const success = document.getElementById('successMessage');
+
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+
+      success.style.display = 'block';
+      form.reset();
+
+      success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    });
+
+    // Animación simple al hacer scroll
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          entry.target.style.opacity = 1;
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.card,.service,.stat,.step,.case-card,.quote').forEach(el => {
+      el.style.opacity = 0;
+      el.style.transform = 'translateY(24px)';
+      el.style.transition = 'all .6s ease';
+      observer.observe(el);
+    });
+  </script>
+
 </body>
 </html>
