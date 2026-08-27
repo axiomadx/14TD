@@ -3,14 +3,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Axioma/Dx | CRM, Automatización y Transformación Digital</title>
-  <meta name="description" content="Ayudamos a empresas en crecimiento a ordenar ventas, operación y atención con CRM, automatización y transformación digital."/>
+
+  <title>Axioma/Dx | CRM, Kommo, Automatización y Transformación Digital</title>
+
+  <meta
+    name="description"
+    content="Axioma/Dx ayuda a empresas en crecimiento a ordenar ventas, operación y atención mediante Kommo, CRM, automatización y transformación digital."
+  />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
 
   <style>
+
     :root{
       --primary:#2563eb;
       --primary-dark:#1d4ed8;
@@ -21,12 +30,19 @@
       --bg:#f8fafc;
       --border:#e2e8f0;
       --white:#ffffff;
+      --success:#16a34a;
       --shadow:0 10px 30px rgba(2,6,23,.08);
       --radius:18px;
     }
 
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
+    *{
+      box-sizing:border-box;
+    }
+
+    html{
+      scroll-behavior:smooth;
+    }
+
     body{
       margin:0;
       font-family:'Inter',system-ui,-apple-system,sans-serif;
@@ -43,6 +59,7 @@
     .btn{
       display:inline-flex;
       align-items:center;
+      justify-content:center;
       gap:.6rem;
       padding:12px 20px;
       border-radius:12px;
@@ -59,6 +76,7 @@
       color:#fff;
       box-shadow:0 6px 16px rgba(37,99,235,.2);
     }
+
     .btn-primary:hover{
       background:var(--primary-dark);
       transform:translateY(-2px);
@@ -69,17 +87,21 @@
       color:var(--navy);
       border-color:var(--border);
     }
+
     .btn-secondary:hover{
       border-color:var(--primary);
       color:var(--primary);
     }
 
-    /* Header */
+    /* =========================
+       HEADER
+    ========================= */
+
     header{
       position:sticky;
       top:0;
       z-index:1000;
-      background:rgba(255,255,255,.92);
+      background:rgba(255,255,255,.94);
       backdrop-filter:blur(12px);
       border-bottom:1px solid var(--border);
     }
@@ -97,13 +119,16 @@
       font-weight:800;
       color:var(--navy);
       text-decoration:none;
+      white-space:nowrap;
     }
 
-    .logo span{color:var(--primary)}
+    .logo span{
+      color:var(--primary);
+    }
 
     .nav-links{
       display:flex;
-      gap:1.25rem;
+      gap:1.15rem;
       align-items:center;
     }
 
@@ -111,10 +136,12 @@
       color:var(--text);
       text-decoration:none;
       font-weight:500;
-      font-size:.95rem;
+      font-size:.9rem;
     }
 
-    .nav-links a:hover{color:var(--primary)}
+    .nav-links a:hover{
+      color:var(--primary);
+    }
 
     .nav-actions{
       display:flex;
@@ -131,13 +158,16 @@
       padding:4px;
     }
 
-    /* Hero */
+    /* =========================
+       HERO
+    ========================= */
+
     .hero{
       position:relative;
       overflow:hidden;
       background:
         radial-gradient(circle at 20% 20%, rgba(37,99,235,.1), transparent 35%),
-        linear-gradient(180deg, #fff 0%, #f8fbff 100%);
+        linear-gradient(180deg,#fff 0%,#f8fbff 100%);
     }
 
     .hero-grid{
@@ -145,22 +175,24 @@
       grid-template-columns:1.1fr .9fr;
       gap:2.5rem;
       align-items:center;
-      padding:48px 0 36px;
+      padding:58px 0 46px;
     }
 
     .hero h1{
-      font-size:clamp(2.1rem, 4.5vw, 3.8rem);
+      font-size:clamp(2.1rem,4.5vw,3.8rem);
       line-height:1.1;
       margin:0 0 1rem;
       letter-spacing:-.03em;
     }
 
-    .hero h1 .accent{color:var(--primary)}
+    .hero h1 .accent{
+      color:var(--primary);
+    }
 
     .hero p{
       font-size:1.05rem;
       color:var(--muted);
-      max-width:600px;
+      max-width:620px;
       margin-bottom:1.5rem;
     }
 
@@ -190,16 +222,27 @@
     }
 
     .metric .icon{
-      width:36px;height:36px;border-radius:10px;
-      display:grid;place-items:center;
+      width:36px;
+      height:36px;
+      border-radius:10px;
+      display:grid;
+      place-items:center;
       background:rgba(37,99,235,.1);
       color:var(--primary);
       font-size:1.1rem;
       font-weight:700;
     }
 
-    .metric strong{display:block;font-size:.98rem}
-    .metric span{display:block;font-size:.78rem;color:var(--muted)}
+    .metric strong{
+      display:block;
+      font-size:.98rem;
+    }
+
+    .metric span{
+      display:block;
+      font-size:.78rem;
+      color:var(--muted);
+    }
 
     .hero-visual{
       position:relative;
@@ -293,15 +336,18 @@
       opacity:.8;
     }
 
-    /* Sections */
+    /* =========================
+       GENERAL SECTIONS
+    ========================= */
+
     section{
-      padding:56px 0;
+      padding:64px 0;
     }
 
     .section-head{
       text-align:center;
-      max-width:720px;
-      margin:0 auto 2.25rem;
+      max-width:760px;
+      margin:0 auto 2.5rem;
     }
 
     .eyebrow{
@@ -332,7 +378,135 @@
       margin:0;
     }
 
-    /* Problems */
+    /* =========================
+       CREDENCIALES
+    ========================= */
+
+    .credentials{
+      background:#f8fafc;
+      border-top:1px solid var(--border);
+      border-bottom:1px solid var(--border);
+    }
+
+    .credentials-grid{
+      display:grid;
+      grid-template-columns:.9fr 1.1fr;
+      gap:2rem;
+      align-items:stretch;
+    }
+
+    .profile-card{
+      background:#fff;
+      border:1px solid var(--border);
+      border-radius:24px;
+      padding:28px;
+      box-shadow:var(--shadow);
+      text-align:center;
+    }
+
+    .profile-image{
+      width:150px;
+      height:150px;
+      object-fit:cover;
+      border-radius:50%;
+      display:block;
+      margin:0 auto 1.25rem;
+      border:6px solid #fff;
+      box-shadow:0 12px 30px rgba(15,23,42,.14);
+    }
+
+    .profile-card h3{
+      margin:.3rem 0 .35rem;
+      font-size:1.45rem;
+    }
+
+    .profile-role{
+      color:var(--primary);
+      font-weight:700;
+      font-size:.9rem;
+      margin-bottom:1rem;
+    }
+
+    .profile-description{
+      color:var(--muted);
+      font-size:.94rem;
+      line-height:1.65;
+      margin-bottom:1.25rem;
+    }
+
+    .credential-tags{
+      display:flex;
+      justify-content:center;
+      flex-wrap:wrap;
+      gap:.5rem;
+    }
+
+    .credential-tag{
+      background:#eff6ff;
+      color:var(--primary);
+      border:1px solid #dbeafe;
+      border-radius:999px;
+      padding:6px 10px;
+      font-size:.76rem;
+      font-weight:700;
+    }
+
+    .credential-cards{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:1rem;
+    }
+
+    .credential-card{
+      background:#fff;
+      border:1px solid var(--border);
+      border-radius:20px;
+      padding:16px;
+      box-shadow:var(--shadow);
+      transition:.25s ease;
+    }
+
+    .credential-card:hover{
+      transform:translateY(-4px);
+      border-color:rgba(37,99,235,.35);
+    }
+
+    .credential-image{
+      width:100%;
+      height:170px;
+      object-fit:cover;
+      border-radius:14px;
+      background:#e2e8f0;
+      display:block;
+      margin-bottom:1rem;
+    }
+
+    .credential-card h3{
+      margin:0 0 .4rem;
+      font-size:1rem;
+    }
+
+    .credential-card p{
+      margin:0;
+      color:var(--muted);
+      font-size:.84rem;
+      line-height:1.5;
+    }
+
+    .verified{
+      display:inline-flex;
+      align-items:center;
+      gap:.35rem;
+      margin-top:.75rem;
+      font-size:.75rem;
+      font-weight:700;
+      color:var(--success);
+    }
+
+    /* =========================
+       PROBLEMS
+    ========================= */
+
     .cards-3{
       display:grid;
       grid-template-columns:repeat(3,1fr);
@@ -354,8 +528,11 @@
     }
 
     .card-icon{
-      width:48px;height:48px;border-radius:14px;
-      display:grid;place-items:center;
+      width:48px;
+      height:48px;
+      border-radius:14px;
+      display:grid;
+      place-items:center;
       background:rgba(37,99,235,.1);
       color:var(--primary);
       font-size:1.35rem;
@@ -373,7 +550,10 @@
       font-size:.95rem;
     }
 
-    /* Results */
+    /* =========================
+       RESULTS
+    ========================= */
+
     .results{
       background:linear-gradient(180deg,var(--navy),#102a63);
       color:#fff;
@@ -385,10 +565,21 @@
       content:"";
       position:absolute;
       inset:0;
-      background:radial-gradient(circle at 10% 20%, rgba(96,165,250,.18), transparent 28%);
+      background:radial-gradient(
+        circle at 10% 20%,
+        rgba(96,165,250,.18),
+        transparent 28%
+      );
     }
 
-    .results .section-head p{color:rgba(255,255,255,.78)}
+    .results .section-head p{
+      color:rgba(255,255,255,.78);
+    }
+
+    .results .section-head .eyebrow{
+      background:rgba(255,255,255,.1);
+      color:#fff;
+    }
 
     .stats{
       display:grid;
@@ -418,7 +609,10 @@
       font-size:.95rem;
     }
 
-    /* Services */
+    /* =========================
+       SERVICES
+    ========================= */
+
     .services{
       background:var(--bg);
     }
@@ -471,7 +665,10 @@
       font-size:.9rem;
     }
 
-    /* Case */
+    /* =========================
+       CASE
+    ========================= */
+
     .case-grid{
       display:grid;
       grid-template-columns:1fr 1fr;
@@ -561,15 +758,21 @@
     }
 
     .avatar{
-      width:46px;height:46px;border-radius:50%;
+      width:46px;
+      height:46px;
+      border-radius:50%;
       background:linear-gradient(135deg,#60a5fa,#2563eb);
-      display:grid;place-items:center;
+      display:grid;
+      place-items:center;
       font-weight:700;
       color:#fff;
       flex-shrink:0;
     }
 
-    /* Testimonials Section */
+    /* =========================
+       TESTIMONIALS
+    ========================= */
+
     .testimonials{
       background:var(--bg);
     }
@@ -627,7 +830,10 @@
       font-weight:600;
     }
 
-    /* Process */
+    /* =========================
+       PROCESS
+    ========================= */
+
     .process{
       background:#fff;
     }
@@ -636,7 +842,6 @@
       display:grid;
       grid-template-columns:repeat(4,1fr);
       gap:1rem;
-      position:relative;
     }
 
     .step{
@@ -649,10 +854,13 @@
     }
 
     .step-num{
-      width:36px;height:36px;border-radius:50%;
+      width:36px;
+      height:36px;
+      border-radius:50%;
       background:var(--primary);
       color:#fff;
-      display:grid;place-items:center;
+      display:grid;
+      place-items:center;
       font-weight:700;
       margin-bottom:.85rem;
       font-size:.9rem;
@@ -669,7 +877,10 @@
       font-size:.9rem;
     }
 
-    /* CTA */
+    /* =========================
+       CTA
+    ========================= */
+
     .cta{
       background:linear-gradient(135deg,var(--navy),#102a63);
       color:#fff;
@@ -681,7 +892,11 @@
       content:"";
       position:absolute;
       inset:-30%;
-      background:radial-gradient(circle at 20% 30%, rgba(96,165,250,.16), transparent 24%);
+      background:radial-gradient(
+        circle at 20% 30%,
+        rgba(96,165,250,.16),
+        transparent 24%
+      );
     }
 
     .cta-grid{
@@ -721,9 +936,12 @@
     }
 
     .check{
-      width:24px;height:24px;border-radius:50%;
+      width:24px;
+      height:24px;
+      border-radius:50%;
       background:rgba(255,255,255,.12);
-      display:grid;place-items:center;
+      display:grid;
+      place-items:center;
       font-size:.8rem;
     }
 
@@ -751,7 +969,9 @@
       gap:.85rem;
     }
 
-    input, textarea, select{
+    input,
+    textarea,
+    select{
       width:100%;
       padding:12px 14px;
       border-radius:12px;
@@ -762,7 +982,9 @@
       font-size:.9rem;
     }
 
-    input:focus, textarea:focus, select:focus{
+    input:focus,
+    textarea:focus,
+    select:focus{
       outline:none;
       border-color:var(--primary);
       box-shadow:0 0 0 3px rgba(37,99,235,.12);
@@ -773,13 +995,22 @@
       resize:vertical;
     }
 
-    /* Honeypot field (Anti-spam) */
     .gotcha{
       display:none !important;
       visibility:hidden !important;
     }
 
-    /* Footer */
+    .privacy-note{
+      font-size:.72rem;
+      color:var(--muted);
+      line-height:1.4;
+      margin-top:.25rem;
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+
     footer{
       background:#07152f;
       color:#cbd5e1;
@@ -813,7 +1044,9 @@
       font-size:.9rem;
     }
 
-    .footer-col a:hover{color:#fff}
+    .footer-col a:hover{
+      color:#fff;
+    }
 
     .socials{
       display:flex;
@@ -822,8 +1055,11 @@
     }
 
     .social{
-      width:36px;height:36px;border-radius:10px;
-      display:grid;place-items:center;
+      width:36px;
+      height:36px;
+      border-radius:10px;
+      display:grid;
+      place-items:center;
       background:rgba(255,255,255,.06);
       color:#fff;
       text-decoration:none;
@@ -841,9 +1077,14 @@
       color:#94a3b8;
     }
 
-    /* Responsive */
-    @media (max-width: 1024px){
+    /* =========================
+       RESPONSIVE
+    ========================= */
+
+    @media (max-width:1024px){
+
       .hero-grid,
+      .credentials-grid,
       .case-grid,
       .testimonials-grid,
       .cta-grid{
@@ -861,7 +1102,8 @@
       }
     }
 
-    @media (max-width: 768px){
+    @media (max-width:768px){
+
       .nav-links{
         position:fixed;
         inset:68px 0 auto 0;
@@ -879,7 +1121,13 @@
         transform:translateY(0);
       }
 
-      .menu-btn{display:block}
+      .menu-btn{
+        display:block;
+      }
+
+      .nav-actions .btn{
+        display:none;
+      }
 
       .cards-3,
       .services-grid,
@@ -887,594 +1135,1915 @@
       .steps,
       .grid-2,
       .case-metrics,
+      .credential-cards,
       .footer-grid{
         grid-template-columns:1fr;
       }
 
-      section{padding:40px 0}
+      section{
+        padding:44px 0;
+      }
 
-      .hero-grid{padding:36px 0 28px}
+      .hero-grid{
+        padding:38px 0 30px;
+      }
 
-      .hero-metrics{flex-direction:column}
+      .hero-metrics{
+        flex-direction:column;
+      }
+
+      .metric{
+        width:100%;
+      }
+
+      .profile-image{
+        width:125px;
+        height:125px;
+      }
     }
+
   </style>
 </head>
+
 <body>
 
+  <!-- =========================
+       HEADER
+  ========================= -->
+
   <header>
+
     <div class="container nav">
-      <a href="#" class="logo">Axioma<span>/Dx</span></a>
+
+      <a href="#inicio" class="logo">
+        Axioma<span>/Dx</span>
+      </a>
 
       <nav class="nav-links" id="navLinks">
+
         <a href="#inicio">Inicio</a>
-        <a href="#servicios">Servicios</a>
-        <a href="#casos">Casos de éxito</a>
-        <a href="#testimonios">Testimonios</a>
-        <a href="#proceso">Proceso</a>
-        <a href="#contacto">Contacto</a>
+
+        <a href="#credenciales">
+          Credenciales
+        </a>
+
+        <a href="#servicios">
+          Servicios
+        </a>
+
+        <a href="#casos">
+          Casos de éxito
+        </a>
+
+        <a href="#testimonios">
+          Testimonios
+        </a>
+
+        <a href="#proceso">
+          Proceso
+        </a>
+
+        <a href="#contacto">
+          Contacto
+        </a>
+
       </nav>
 
       <div class="nav-actions">
-        <a href="#contacto" class="btn btn-primary">Solicitar diagnóstico</a>
-        <button class="menu-btn" id="menuBtn" aria-label="Abrir menú">☰</button>
+
+        <a
+          href="#contacto"
+          class="btn btn-primary"
+        >
+          Solicitar diagnóstico
+        </a>
+
+        <button
+          class="menu-btn"
+          id="menuBtn"
+          aria-label="Abrir menú"
+        >
+          ☰
+        </button>
+
       </div>
+
     </div>
+
   </header>
+
 
   <main>
 
-    <!-- HERO -->
-    <section class="hero" id="inicio">
+    <!-- =========================
+         HERO
+    ========================= -->
+
+    <section
+      class="hero"
+      id="inicio"
+    >
+
       <div class="container hero-grid">
 
         <div>
-          <div class="eyebrow">CRM • Automatización • Transformación digital</div>
+
+          <div class="eyebrow">
+            CRM • Kommo • Automatización • Transformación digital
+          </div>
 
           <h1>
+
             Transformamos operación, ventas y seguimiento comercial con
-            <span class="accent">CRM y automatización</span>
+
+            <span class="accent">
+              CRM y automatización
+            </span>
+
           </h1>
 
           <p>
-            Ayudamos a empresas en crecimiento a ordenar procesos, acelerar respuestas y convertir más oportunidades en resultados medibles.
+
+            Ayudamos a empresas en crecimiento a ordenar procesos,
+            acelerar respuestas y convertir más oportunidades en
+            resultados medibles mediante tecnología, procesos y
+            automatización.
+
           </p>
 
           <div class="hero-actions">
-            <a href="#contacto" class="btn btn-primary">Solicita tu diagnóstico →</a>
-            <a href="#casos" class="btn btn-secondary">Ver casos de éxito</a>
+
+            <a
+              href="#contacto"
+              class="btn btn-primary"
+            >
+              Solicita tu diagnóstico →
+            </a>
+
+            <a
+              href="#credenciales"
+              class="btn btn-secondary"
+            >
+              Conoce mi experiencia
+            </a>
+
           </div>
 
           <div class="hero-metrics">
-            <div class="metric">
-              <div class="icon">✓</div>
-              <div>
-                <strong>+50 proyectos</strong>
-                <span>Implementados con éxito</span>
-              </div>
-            </div>
 
             <div class="metric">
-              <div class="icon">⚡</div>
-              <div>
-                <strong>Equipos certificados</strong>
-                <span>CRM y automatización</span>
+
+              <div class="icon">
+                ✓
               </div>
+
+              <div>
+
+                <strong>
+                  +50 proyectos
+                </strong>
+
+                <span>
+                  Implementados con éxito
+                </span>
+
+              </div>
+
             </div>
 
+
             <div class="metric">
-              <div class="icon">📈</div>
-              <div>
-                <strong>Metodología probada</strong>
-                <span>Enfocada en resultados</span>
+
+              <div class="icon">
+                ⚡
               </div>
+
+              <div>
+
+                <strong>
+                  CRM + Automatización
+                </strong>
+
+                <span>
+                  Especialización tecnológica
+                </span>
+
+              </div>
+
             </div>
+
+
+            <div class="metric">
+
+              <div class="icon">
+                📈
+              </div>
+
+              <div>
+
+                <strong>
+                  Metodología probada
+                </strong>
+
+                <span>
+                  Enfocada en resultados
+                </span>
+
+              </div>
+
+            </div>
+
           </div>
+
         </div>
 
+
         <div class="hero-visual">
+
           <div class="hero-card">
+
             <div class="dashboard">
 
               <div class="dashboard-top">
-                <span>Pipeline comercial</span>
-                <span>Últimos 30 días</span>
+
+                <span>
+                  Pipeline comercial
+                </span>
+
+                <span>
+                  Últimos 30 días
+                </span>
+
               </div>
+
 
               <div class="chart">
-                <div style="font-size:1.8rem;font-weight:800;">+38%</div>
-                <div style="opacity:.75;margin-top:.2rem;font-size:.85rem;">Conversión de oportunidades</div>
+
+                <div style="font-size:1.8rem;font-weight:800;">
+                  +38%
+                </div>
+
+                <div style="opacity:.75;margin-top:.2rem;font-size:.85rem;">
+                  Conversión de oportunidades
+                </div>
 
                 <div class="bars">
+
                   <div class="bar"></div>
                   <div class="bar"></div>
                   <div class="bar"></div>
                   <div class="bar"></div>
                   <div class="bar"></div>
                   <div class="bar"></div>
+
                 </div>
+
               </div>
 
+
               <div class="mini-cards">
+
                 <div class="mini">
-                  <strong>42h</strong>
-                  <span>Tiempo ahorrado</span>
+
+                  <strong>
+                    42h
+                  </strong>
+
+                  <span>
+                    Tiempo ahorrado
+                  </span>
+
                 </div>
+
+
                 <div class="mini">
-                  <strong>95%</strong>
-                  <span>Seguimiento</span>
+
+                  <strong>
+                    95%
+                  </strong>
+
+                  <span>
+                    Seguimiento
+                  </span>
+
                 </div>
+
+
                 <div class="mini">
-                  <strong>3.2x</strong>
-                  <span>ROI estimado</span>
+
+                  <strong>
+                    3.2x
+                  </strong>
+
+                  <span>
+                    ROI estimado
+                  </span>
+
                 </div>
+
               </div>
 
             </div>
+
           </div>
+
         </div>
 
       </div>
+
     </section>
 
-    <!-- PROBLEMAS -->
-    <section>
+
+    <!-- =========================
+         CREDENCIALES
+    ========================= -->
+
+    <section
+      class="credentials"
+      id="credenciales"
+    >
+
       <div class="container">
 
         <div class="section-head">
-          <div class="eyebrow">Problemas que resolvemos</div>
-          <h2>Los cuellos de botella que frenan el crecimiento</h2>
-          <p>Identificamos y eliminamos la fricción comercial y operativa que impide escalar con orden.</p>
+
+          <div class="eyebrow">
+            Credenciales y experiencia
+          </div>
+
+          <h2>
+            Experiencia para convertir tecnología en resultados
+          </h2>
+
+          <p>
+            Conoce la experiencia, especialización y capacidades
+            detrás de Axioma/Dx.
+          </p>
+
         </div>
+
+
+        <div class="credentials-grid">
+
+
+          <!-- PERFIL -->
+
+          <div class="profile-card">
+
+            <!--
+              CAMBIAR ESTA IMAGEN
+              Sustituye el src por tu fotografía profesional.
+            -->
+
+            <img
+              class="profile-image"
+              src="https://placehold.co/500x500/png?text=TU+FOTO"
+              alt="Foto profesional del especialista de Axioma/Dx"
+            />
+
+            <h3>
+              Axioma/Dx
+            </h3>
+
+            <div class="profile-role">
+              Consultoría CRM · Automatización · Transformación Digital
+            </div>
+
+            <p class="profile-description">
+
+              Ayudo a empresas a transformar procesos comerciales
+              y operativos mediante CRM, automatización, análisis
+              de datos y metodologías orientadas a resultados.
+
+            </p>
+
+
+            <div class="credential-tags">
+
+              <span class="credential-tag">
+                Kommo
+              </span>
+
+              <span class="credential-tag">
+                CRM
+              </span>
+
+              <span class="credential-tag">
+                Automatización
+              </span>
+
+              <span class="credential-tag">
+                Ventas
+              </span>
+
+              <span class="credential-tag">
+                Integraciones
+              </span>
+
+              <span class="credential-tag">
+                BI & KPIs
+              </span>
+
+            </div>
+
+
+            <div style="margin-top:1.5rem;">
+
+              <a
+                href="#contacto"
+                class="btn btn-primary"
+              >
+                Hablar con un especialista →
+              </a>
+
+            </div>
+
+          </div>
+
+
+          <!-- CREDENCIALES -->
+
+          <div class="credential-cards">
+
+
+            <!-- CREDENCIAL 1 -->
+
+            <article class="credential-card">
+
+              <!--
+                CAMBIAR ESTA IMAGEN
+                Coloca aquí tu certificación o credencial oficial de Kommo.
+              -->
+
+              <img
+                class="credential-image"
+                src="https://placehold.co/900x600/png?text=CREDENCIAL+KOMMO"
+                alt="Credencial o certificación Kommo"
+              />
+
+              <h3>
+                Especialización en Kommo
+              </h3>
+
+              <p>
+                Espacio preparado para mostrar tu certificación,
+                acreditación, insignia o credencial oficial.
+              </p>
+
+              <!--
+                Cuando tengas la certificación real,
+                puedes cambiar este texto por:
+                "Certificación oficial Kommo"
+              -->
+
+              <div class="verified">
+                ✓ Credencial para validar
+              </div>
+
+            </article>
+
+
+            <!-- CREDENCIAL 2 -->
+
+            <article class="credential-card">
+
+              <!--
+                CAMBIAR ESTA IMAGEN
+                Puedes colocar captura de tu perfil,
+                panel de partner, proyecto o implementación.
+              -->
+
+              <img
+                class="credential-image"
+                src="https://placehold.co/900x600/png?text=PROYECTO+CRM"
+                alt="Proyecto de implementación CRM"
+              />
+
+              <h3>
+                Implementación CRM
+              </h3>
+
+              <p>
+                Muestra aquí una captura de una implementación,
+                pipeline, automatización o proyecto realizado.
+              </p>
+
+              <div class="verified">
+                ✓ Experiencia práctica
+              </div>
+
+            </article>
+
+
+            <!-- CREDENCIAL 3 -->
+
+            <article class="credential-card">
+
+              <!--
+                CAMBIAR ESTA IMAGEN
+              -->
+
+              <img
+                class="credential-image"
+                src="https://placehold.co/900x600/png?text=AUTOMATIZACION"
+                alt="Automatización comercial"
+              />
+
+              <h3>
+                Automatización comercial
+              </h3>
+
+              <p>
+                Presenta aquí una automatización, flujo comercial,
+                integración o proceso digital desarrollado.
+              </p>
+
+              <div class="verified">
+                ✓ Automatización y procesos
+              </div>
+
+            </article>
+
+
+            <!-- CREDENCIAL 4 -->
+
+            <article class="credential-card">
+
+              <!--
+                CAMBIAR ESTA IMAGEN
+              -->
+
+              <img
+                class="credential-image"
+                src="https://placehold.co/900x600/png?text=CASO+DE+EXITO"
+                alt="Caso de éxito CRM"
+              />
+
+              <h3>
+                Casos y resultados
+              </h3>
+
+              <p>
+                Espacio para mostrar resultados, testimonios,
+                dashboards o evidencia visual de proyectos.
+              </p>
+
+              <div class="verified">
+                ✓ Orientación a resultados
+              </div>
+
+            </article>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         PROBLEMAS
+    ========================= -->
+
+    <section>
+
+      <div class="container">
+
+        <div class="section-head">
+
+          <div class="eyebrow">
+            Problemas que resolvemos
+          </div>
+
+          <h2>
+            Los cuellos de botella que frenan el crecimiento
+          </h2>
+
+          <p>
+            Identificamos y eliminamos la fricción comercial y
+            operativa que impide escalar con orden.
+          </p>
+
+        </div>
+
 
         <div class="cards-3">
 
-          <article class="card">
-            <div class="card-icon">👥</div>
-            <h3>Leads sin seguimiento</h3>
-            <p>Oportunidades que se pierden por falta de visibilidad, responsables claros y procesos consistentes.</p>
-          </article>
 
           <article class="card">
-            <div class="card-icon">⏱</div>
-            <h3>Procesos manuales</h3>
-            <p>Tareas repetitivas que consumen tiempo del equipo y retrasan la respuesta al cliente.</p>
+
+            <div class="card-icon">
+              👥
+            </div>
+
+            <h3>
+              Leads sin seguimiento
+            </h3>
+
+            <p>
+              Oportunidades que se pierden por falta de visibilidad,
+              responsables claros y procesos consistentes.
+            </p>
+
           </article>
 
+
           <article class="card">
-            <div class="card-icon">🗂</div>
-            <h3>Información dispersa</h3>
-            <p>Datos distribuidos en múltiples sistemas que dificultan tomar decisiones rápidas y confiables.</p>
+
+            <div class="card-icon">
+              ⏱
+            </div>
+
+            <h3>
+              Procesos manuales
+            </h3>
+
+            <p>
+              Tareas repetitivas que consumen tiempo del equipo
+              y retrasan la respuesta al cliente.
+            </p>
+
+          </article>
+
+
+          <article class="card">
+
+            <div class="card-icon">
+              🗂
+            </div>
+
+            <h3>
+              Información dispersa
+            </h3>
+
+            <p>
+              Datos distribuidos en múltiples sistemas que
+              dificultan tomar decisiones rápidas y confiables.
+            </p>
+
           </article>
 
         </div>
+
       </div>
+
     </section>
 
-    <!-- RESULTADOS -->
+
+    <!-- =========================
+         RESULTADOS
+    ========================= -->
+
     <section class="results">
+
       <div class="container">
 
         <div class="section-head">
-          <div class="eyebrow">Resultados</div>
-          <h2>Impacto medible en operación y ventas</h2>
-          <p>Convertimos iniciativas digitales en mejoras concretas de productividad, seguimiento y conversión.</p>
+
+          <div class="eyebrow">
+            Resultados
+          </div>
+
+          <h2>
+            Impacto medible en operación y ventas
+          </h2>
+
+          <p>
+            Convertimos iniciativas digitales en mejoras concretas
+            de productividad, seguimiento y conversión.
+          </p>
+
         </div>
+
 
         <div class="stats">
 
           <div class="stat">
-            <div class="num">40%</div>
-            <p>Más productividad operativa</p>
+
+            <div class="num">
+              40%
+            </div>
+
+            <p>
+              Más productividad operativa
+            </p>
+
           </div>
 
-          <div class="stat">
-            <div class="num">30%</div>
-            <p>Más conversión de oportunidades</p>
-          </div>
 
           <div class="stat">
-            <div class="num">50%</div>
-            <p>Menos tiempo en tareas manuales</p>
+
+            <div class="num">
+              30%
+            </div>
+
+            <p>
+              Más conversión de oportunidades
+            </p>
+
           </div>
 
+
           <div class="stat">
-            <div class="num">95%</div>
-            <p>Seguimiento comercial visible</p>
+
+            <div class="num">
+              50%
+            </div>
+
+            <p>
+              Menos tiempo en tareas manuales
+            </p>
+
+          </div>
+
+
+          <div class="stat">
+
+            <div class="num">
+              95%
+            </div>
+
+            <p>
+              Seguimiento comercial visible
+            </p>
+
           </div>
 
         </div>
+
       </div>
+
     </section>
 
-    <!-- SERVICIOS -->
-    <section class="services" id="servicios">
+
+    <!-- =========================
+         SERVICIOS
+    ========================= -->
+
+    <section
+      class="services"
+      id="servicios"
+    >
+
       <div class="container">
 
         <div class="section-head">
-          <div class="eyebrow">Servicios</div>
-          <h2>Soluciones para crecer con control</h2>
-          <p>Diseñamos e implementamos procesos digitales alineados a objetivos comerciales y operativos.</p>
+
+          <div class="eyebrow">
+            Servicios
+          </div>
+
+          <h2>
+            Soluciones para crecer con control
+          </h2>
+
+          <p>
+            Diseñamos e implementamos procesos digitales alineados
+            a objetivos comerciales y operativos.
+          </p>
+
         </div>
+
 
         <div class="services-grid">
 
-          <article class="service">
-            <div class="service-top">
-              <div class="card-icon" style="margin:0;">🧩</div>
-              <h3>Implementación CRM</h3>
-            </div>
-            <p>Centraliza clientes, oportunidades y seguimiento en una sola plataforma para ganar visibilidad y control comercial.</p>
-            <a href="#contacto">Agenda una llamada →</a>
-          </article>
 
           <article class="service">
+
             <div class="service-top">
-              <div class="card-icon" style="margin:0;">⚙️</div>
-              <h3>Automatización</h3>
+
+              <div
+                class="card-icon"
+                style="margin:0;"
+              >
+                🧩
+              </div>
+
+              <h3>
+                Implementación CRM
+              </h3>
+
             </div>
-            <p>Elimina tareas repetitivas, acelera respuestas y mejora la productividad del equipo sin aumentar complejidad.</p>
-            <a href="#contacto">Agenda una llamada →</a>
+
+            <p>
+              Centraliza clientes, oportunidades y seguimiento
+              en una sola plataforma para ganar visibilidad
+              y control comercial.
+            </p>
+
+            <a href="#contacto">
+              Agenda una llamada →
+            </a>
+
           </article>
 
-          <article class="service">
-            <div class="service-top">
-              <div class="card-icon" style="margin:0;">📊</div>
-              <h3>Optimización operativa</h3>
-            </div>
-            <p>Diseñamos procesos más eficientes para reducir fricción, errores y tiempos de ejecución entre áreas.</p>
-            <a href="#contacto">Agenda una llamada →</a>
-          </article>
 
           <article class="service">
+
             <div class="service-top">
-              <div class="card-icon" style="margin:0;">🚀</div>
-              <h3>Transformación digital</h3>
+
+              <div
+                class="card-icon"
+                style="margin:0;"
+              >
+                ⚙️
+              </div>
+
+              <h3>
+                Automatización
+              </h3>
+
             </div>
-            <p>Integramos tecnología, procesos y estrategia para impulsar crecimiento sostenible y decisiones basadas en datos.</p>
-            <a href="#contacto">Agenda una llamada →</a>
+
+            <p>
+              Elimina tareas repetitivas, acelera respuestas y
+              mejora la productividad del equipo sin aumentar
+              complejidad.
+            </p>
+
+            <a href="#contacto">
+              Agenda una llamada →
+            </a>
+
+          </article>
+
+
+          <article class="service">
+
+            <div class="service-top">
+
+              <div
+                class="card-icon"
+                style="margin:0;"
+              >
+                📊
+              </div>
+
+              <h3>
+                Optimización operativa
+              </h3>
+
+            </div>
+
+            <p>
+              Diseñamos procesos más eficientes para reducir
+              fricción, errores y tiempos de ejecución entre áreas.
+            </p>
+
+            <a href="#contacto">
+              Agenda una llamada →
+            </a>
+
+          </article>
+
+
+          <article class="service">
+
+            <div class="service-top">
+
+              <div
+                class="card-icon"
+                style="margin:0;"
+              >
+                🚀
+              </div>
+
+              <h3>
+                Transformación digital
+              </h3>
+
+            </div>
+
+            <p>
+              Integramos tecnología, procesos y estrategia para
+              impulsar crecimiento sostenible y decisiones
+              basadas en datos.
+            </p>
+
+            <a href="#contacto">
+              Agenda una llamada →
+            </a>
+
           </article>
 
         </div>
+
       </div>
+
     </section>
 
-    <!-- CASO DE ÉXITO EXISTENTE -->
+
+    <!-- =========================
+         CASOS
+    ========================= -->
+
     <section id="casos">
+
       <div class="container">
 
         <div class="section-head">
-          <div class="eyebrow">Caso de éxito</div>
-          <h2>De procesos manuales a resultados medibles</h2>
-          <p>Un ejemplo de cómo un CRM bien implementado puede transformar seguimiento, visibilidad y conversión.</p>
+
+          <div class="eyebrow">
+            Caso de éxito
+          </div>
+
+          <h2>
+            De procesos manuales a resultados medibles
+          </h2>
+
+          <p>
+            Un ejemplo de cómo un CRM bien implementado puede
+            transformar seguimiento, visibilidad y conversión.
+          </p>
+
         </div>
+
 
         <div class="case-grid">
 
-          <div class="case-card">
-            <div class="eyebrow">Servicios profesionales</div>
-            <h3>Operación comercial ordenada y escalable</h3>
-            <p>Una empresa de servicios profesionales transformó su operación comercial mediante CRM y automatización de seguimiento.</p>
 
-            <div class="case-metrics">
-              <div class="item">
-                <strong>40%</strong>
-                <span>Menos tiempo de seguimiento</span>
-              </div>
-              <div class="item">
-                <strong>25%</strong>
-                <span>Más conversión</span>
-              </div>
-              <div class="item">
-                <strong>100%</strong>
-                <span>Visibilidad del embudo</span>
-              </div>
+          <div class="case-card">
+
+            <div class="eyebrow">
+              Servicios profesionales
             </div>
 
-            <a href="#contacto" class="btn btn-primary">Quiero resultados similares</a>
-          </div>
+            <h3>
+              Operación comercial ordenada y escalable
+            </h3>
 
-          <div class="quote">
             <p>
-              Axioma/Dx entendió nuestro negocio y construyó un sistema que hoy nos permite crecer de forma ordenada, medir el seguimiento y responder más rápido a nuestros clientes.
+              Una empresa de servicios profesionales transformó
+              su operación comercial mediante CRM y automatización
+              de seguimiento.
             </p>
 
-            <div class="author">
-              <div class="avatar">JR</div>
-              <div>
-                <strong>Jorge Ramírez</strong><br>
-                <span style="opacity:.8;font-size:.85rem;">Director Comercial · Empresa de Servicios Profesionales</span>
+
+            <div class="case-metrics">
+
+              <div class="item">
+
+                <strong>
+                  40%
+                </strong>
+
+                <span>
+                  Menos tiempo de seguimiento
+                </span>
+
               </div>
+
+
+              <div class="item">
+
+                <strong>
+                  25%
+                </strong>
+
+                <span>
+                  Más conversión
+                </span>
+
+              </div>
+
+
+              <div class="item">
+
+                <strong>
+                  100%
+                </strong>
+
+                <span>
+                  Visibilidad del embudo
+                </span>
+
+              </div>
+
             </div>
+
+
+            <a
+              href="#contacto"
+              class="btn btn-primary"
+            >
+              Quiero resultados similares
+            </a>
+
+          </div>
+
+
+          <div class="quote">
+
+            <p>
+              Axioma/Dx entendió nuestro negocio y construyó
+              un sistema que hoy nos permite crecer de forma
+              ordenada, medir el seguimiento y responder más
+              rápido a nuestros clientes.
+            </p>
+
+
+            <div class="author">
+
+              <div class="avatar">
+                JR
+              </div>
+
+              <div>
+
+                <strong>
+                  Jorge Ramírez
+                </strong>
+
+                <br>
+
+                <span style="opacity:.8;font-size:.85rem;">
+                  Director Comercial · Empresa de Servicios Profesionales
+                </span>
+
+              </div>
+
+            </div>
+
           </div>
 
         </div>
+
       </div>
+
     </section>
 
-    <!-- TESTIMONIOS -->
-    <section class="testimonials" id="testimonios">
+
+    <!-- =========================
+         TESTIMONIOS
+    ========================= -->
+
+    <section
+      class="testimonials"
+      id="testimonios"
+    >
+
       <div class="container">
 
         <div class="section-head">
-          <div class="eyebrow">Testimonios</div>
-          <h2>Lo que dicen quienes confían en Axioma/Dx</h2>
-          <p>Casos reales de directores y líderes que impulsaron la transformación de sus organizaciones.</p>
+
+          <div class="eyebrow">
+            Testimonios
+          </div>
+
+          <h2>
+            Lo que dicen quienes confían en Axioma/Dx
+          </h2>
+
+          <p>
+            Casos reales de directores y líderes que impulsaron
+            la transformación de sus organizaciones.
+          </p>
+
         </div>
+
 
         <div class="testimonials-grid">
 
-          <!-- Testimonio 1 -->
+
           <article class="testimonial-card">
+
             <div>
-              <div class="testimonial-badge">Servicios Logísticos · PYME, Mérida</div>
+
+              <div class="testimonial-badge">
+                Servicios Logísticos · PYME, Mérida
+              </div>
+
               <p class="testimonial-body">
-                “Gracias a Axioma/Dx logramos estructurar nuestro embudo comercial y automatizar tareas repetitivas. Ahora nuestro equipo comercial reacciona en minutos a cada lead y no dejamos ir ninguna oportunidad.”
+                “Gracias a Axioma/Dx logramos estructurar nuestro
+                embudo comercial y automatizar tareas repetitivas.
+                Ahora nuestro equipo comercial reacciona en minutos
+                a cada lead y no dejamos ir ninguna oportunidad.”
               </p>
+
               <div class="testimonial-highlight">
-                ⚡ Resultados destacados: Reducción drástica en tiempos de respuesta e integración completa de embudo comercial.
+                ⚡ Resultados destacados: Reducción drástica en
+                tiempos de respuesta e integración completa de
+                embudo comercial.
               </div>
+
             </div>
+
+
             <div class="author">
-              <div class="avatar">LG</div>
-              <div>
-                <strong>Laura G.</strong><br>
-                <span style="color:var(--muted);font-size:.85rem;">Directora General, Servicios Logísticos (Mérida)</span>
+
+              <div class="avatar">
+                LG
               </div>
+
+              <div>
+
+                <strong>
+                  Laura G.
+                </strong>
+
+                <br>
+
+                <span style="color:var(--muted);font-size:.85rem;">
+                  Directora General, Servicios Logísticos (Mérida)
+                </span>
+
+              </div>
+
             </div>
+
           </article>
 
-          <!-- Testimonio 2 -->
+
           <article class="testimonial-card">
+
             <div>
-              <div class="testimonial-badge">Startup Tecnológica · CDMX</div>
+
+              <div class="testimonial-badge">
+                Startup Tecnológica · CDMX
+              </div>
+
               <p class="testimonial-body">
-                “Axioma/Dx nos ayudó a redefinir nuestra estrategia comercial y a lanzar campañas digitales que triplicaron nuestras consultas de nuevos clientes en solo tres meses. Además, su enfoque en la optimización de procesos internos nos permitió reducir errores y dedicar más tiempo a la innovación. Recomiendo ampliamente su acompañamiento para cualquier empresa que busque crecer de manera sostenible.”
+                “Axioma/Dx nos ayudó a redefinir nuestra estrategia
+                comercial y a lanzar campañas digitales que triplicaron
+                nuestras consultas de nuevos clientes en solo tres meses.
+                Además, su enfoque en la optimización de procesos internos
+                nos permitió reducir errores y dedicar más tiempo a la
+                innovación.”
               </p>
+
               <div class="testimonial-highlight">
-                📈 Resultados destacados: 3x en consultas de nuevos clientes en 3 meses y reducción sustancial de errores operativos.
+                📈 Resultados destacados: 3x en consultas de nuevos
+                clientes en 3 meses y reducción sustancial de errores
+                operativos.
               </div>
+
             </div>
+
+
             <div class="author">
-              <div class="avatar">MR</div>
-              <div>
-                <strong>Manuel R.</strong><br>
-                <span style="color:var(--muted);font-size:.85rem;">CEO Startup Tecnológica (CDMX)</span>
+
+              <div class="avatar">
+                MR
               </div>
+
+              <div>
+
+                <strong>
+                  Manuel R.
+                </strong>
+
+                <br>
+
+                <span style="color:var(--muted);font-size:.85rem;">
+                  CEO Startup Tecnológica (CDMX)
+                </span>
+
+              </div>
+
             </div>
+
           </article>
 
         </div>
+
       </div>
+
     </section>
 
-    <!-- PROCESO -->
-    <section class="process" id="proceso">
+
+    <!-- =========================
+         PROCESO
+    ========================= -->
+
+    <section
+      class="process"
+      id="proceso"
+    >
+
       <div class="container">
 
         <div class="section-head">
-          <div class="eyebrow">Cómo trabajamos</div>
-          <h2>Un proceso simple y orientado a resultados</h2>
-          <p>Reducimos incertidumbre con una metodología clara desde el diagnóstico hasta la medición del impacto.</p>
+
+          <div class="eyebrow">
+            Cómo trabajamos
+          </div>
+
+          <h2>
+            Un proceso simple y orientado a resultados
+          </h2>
+
+          <p>
+            Reducimos incertidumbre con una metodología clara
+            desde el diagnóstico hasta la medición del impacto.
+          </p>
+
         </div>
+
 
         <div class="steps">
 
-          <div class="step">
-            <div class="step-num">1</div>
-            <h4>Diagnóstico</h4>
-            <p>Analizamos situación actual, procesos, herramientas y oportunidades prioritarias.</p>
-          </div>
 
           <div class="step">
-            <div class="step-num">2</div>
-            <h4>Diseño</h4>
-            <p>Definimos la solución alineada a objetivos comerciales y operativos del negocio.</p>
+
+            <div class="step-num">
+              1
+            </div>
+
+            <h4>
+              Diagnóstico
+            </h4>
+
+            <p>
+              Analizamos situación actual, procesos,
+              herramientas y oportunidades prioritarias.
+            </p>
+
           </div>
 
-          <div class="step">
-            <div class="step-num">3</div>
-            <h4>Implementación</h4>
-            <p>Configuramos herramientas, automatizaciones e integramos los procesos necesarios.</p>
-          </div>
 
           <div class="step">
-            <div class="step-num">4</div>
-            <h4>Medición</h4>
-            <p>Monitoreamos resultados y optimizamos continuamente para mejorar el rendimiento.</p>
+
+            <div class="step-num">
+              2
+            </div>
+
+            <h4>
+              Diseño
+            </h4>
+
+            <p>
+              Definimos la solución alineada a objetivos
+              comerciales y operativos del negocio.
+            </p>
+
+          </div>
+
+
+          <div class="step">
+
+            <div class="step-num">
+              3
+            </div>
+
+            <h4>
+              Implementación
+            </h4>
+
+            <p>
+              Configuramos herramientas, automatizaciones
+              e integramos los procesos necesarios.
+            </p>
+
+          </div>
+
+
+          <div class="step">
+
+            <div class="step-num">
+              4
+            </div>
+
+            <h4>
+              Medición
+            </h4>
+
+            <p>
+              Monitoreamos resultados y optimizamos
+              continuamente para mejorar el rendimiento.
+            </p>
+
           </div>
 
         </div>
+
       </div>
+
     </section>
 
-    <!-- CTA & FORMULARIO CONECTADO -->
-    <section class="cta" id="contacto">
+
+    <!-- =========================
+         CTA + FORMULARIO
+    ========================= -->
+
+    <section
+      class="cta"
+      id="contacto"
+    >
+
       <div class="container cta-grid">
 
-        <div>
-          <div class="eyebrow" style="background:rgba(255,255,255,.12);color:#fff;">Diagnóstico inicial</div>
 
-          <h2>¿Listo para transformar tus resultados?</h2>
+        <div>
+
+          <div
+            class="eyebrow"
+            style="background:rgba(255,255,255,.12);color:#fff;"
+          >
+            Diagnóstico inicial
+          </div>
+
+          <h2>
+            ¿Listo para transformar tus resultados?
+          </h2>
 
           <p>
-            Solicita un diagnóstico gratuito y descubre cómo ordenar ventas, operación y atención con CRM y automatización.
+            Solicita un diagnóstico gratuito y descubre cómo
+            ordenar ventas, operación y atención con CRM,
+            Kommo y automatización.
           </p>
 
+
           <div class="benefits">
-            <div class="benefit"><span class="check">✓</span> Sin costo</div>
-            <div class="benefit"><span class="check">✓</span> Sin compromiso</div>
-            <div class="benefit"><span class="check">✓</span> Enfocado en tus objetivos</div>
+
+            <div class="benefit">
+
+              <span class="check">
+                ✓
+              </span>
+
+              Sin costo
+
+            </div>
+
+
+            <div class="benefit">
+
+              <span class="check">
+                ✓
+              </span>
+
+              Sin compromiso
+
+            </div>
+
+
+            <div class="benefit">
+
+              <span class="check">
+                ✓
+              </span>
+
+              Enfocado en tus objetivos
+
+            </div>
+
+
+            <div class="benefit">
+
+              <span class="check">
+                ✓
+              </span>
+
+              Diagnóstico comercial y operativo
+
+            </div>
+
           </div>
+
         </div>
+
 
         <div class="form-card">
 
-          <h3>Solicita tu diagnóstico</h3>
+          <h3>
+            Solicita tu diagnóstico
+          </h3>
 
-          <form action="https://formsubmit.co/axiomadx@gmail.com" method="POST" id="leadForm">
 
-            <!-- Configuraciones FormSubmit -->
-            <input type="hidden" name="_subject" value="Nuevo Lead Diagnóstico - Axioma/Dx">
-            <input type="hidden" name="_template" value="table">
-            <input type="hidden" name="_captcha" value="false">
+          <!--
+            FORMULARIO
+            Los leads llegarán a:
+            axiomadx@gmail.com
 
-            <!-- Campo Anti-Spam Honeypot -->
-            <input type="text" name="_honey" class="gotcha">
+            IMPORTANTE:
+            FormSubmit puede solicitar una activación inicial
+            del correo la primera vez que se utiliza.
+          -->
+
+          <form
+            action="https://formsubmit.co/axiomadx@gmail.com"
+            method="POST"
+            id="leadForm"
+          >
+
+            <input
+              type="hidden"
+              name="_subject"
+              value="Nuevo Lead Diagnóstico - Axioma/Dx"
+            >
+
+            <input
+              type="hidden"
+              name="_template"
+              value="table"
+            >
+
+            <input
+              type="hidden"
+              name="_captcha"
+              value="false"
+            >
+
+            <input
+              type="hidden"
+              name="_next"
+              value="https://axiomadx.com/gracias.html"
+            >
+
+            <input
+              type="hidden"
+              name="_autoresponse"
+              value="Gracias por contactar a Axioma/Dx. Hemos recibido tu solicitud de diagnóstico y nos pondremos en contacto contigo."
+            >
+
+            <!-- Anti-spam -->
+
+            <input
+              type="text"
+              name="_honey"
+              class="gotcha"
+              tabindex="-1"
+              autocomplete="off"
+            >
+
 
             <div class="grid-2">
-              <input type="text" name="Nombre" placeholder="Nombre completo" required>
-              <input type="email" name="Email" placeholder="Correo corporativo" required>
+
+              <input
+                type="text"
+                name="Nombre"
+                placeholder="Nombre completo"
+                autocomplete="name"
+                required
+              >
+
+              <input
+                type="email"
+                name="Email"
+                placeholder="Correo corporativo"
+                autocomplete="email"
+                required
+              >
+
             </div>
 
+
             <div class="grid-2">
-              <input type="text" name="Empresa" placeholder="Empresa" required>
-              <input type="tel" name="Telefono" placeholder="Teléfono">
+
+              <input
+                type="text"
+                name="Empresa"
+                placeholder="Empresa"
+                autocomplete="organization"
+                required
+              >
+
+              <input
+                type="tel"
+                name="Telefono"
+                placeholder="Teléfono"
+                autocomplete="tel"
+              >
+
             </div>
 
-            <!-- Campos de Calificación -->
+
             <div class="grid-2">
-              <select name="Tamano_Empresa" required>
-                <option value="">Tamaño de empresa *</option>
-                <option value="1-10 empleados">1 - 10 empleados</option>
-                <option value="11-50 empleados">11 - 50 empleados</option>
-                <option value="51-200 empleados">51 - 200 empleados</option>
-                <option value="200+ empleados">200+ empleados</option>
+
+              <select
+                name="Tamano_Empresa"
+                required
+              >
+
+                <option value="">
+                  Tamaño de empresa *
+                </option>
+
+                <option value="1-10 empleados">
+                  1 - 10 empleados
+                </option>
+
+                <option value="11-50 empleados">
+                  11 - 50 empleados
+                </option>
+
+                <option value="51-200 empleados">
+                  51 - 200 empleados
+                </option>
+
+                <option value="200+ empleados">
+                  200+ empleados
+                </option>
+
               </select>
 
-              <select name="Urgencia_Proyecto" required>
-                <option value="">Urgencia del proyecto *</option>
-                <option value="Inmediata (< 1 mes)">Inmediata (&lt; 1 mes)</option>
-                <option value="Corto plazo (1-3 meses)">Corto plazo (1-3 meses)</option>
-                <option value="Mediano plazo (3-6 meses)">Mediano plazo (3-6 meses)</option>
-                <option value="Solo explorando">Solo explorando</option>
+
+              <select
+                name="Urgencia_Proyecto"
+                required
+              >
+
+                <option value="">
+                  Urgencia del proyecto *
+                </option>
+
+                <option value="Inmediata - menos de 1 mes">
+                  Inmediata (&lt; 1 mes)
+                </option>
+
+                <option value="Corto plazo - 1 a 3 meses">
+                  Corto plazo (1-3 meses)
+                </option>
+
+                <option value="Mediano plazo - 3 a 6 meses">
+                  Mediano plazo (3-6 meses)
+                </option>
+
+                <option value="Solo explorando">
+                  Solo explorando
+                </option>
+
               </select>
+
             </div>
 
-            <select name="Necesidad_Principal" required>
-              <option value="">Necesidad principal *</option>
-              <option value="Implementar CRM">Implementar CRM</option>
-              <option value="Automatizar procesos">Automatizar procesos</option>
-              <option value="Optimizar operación">Optimizar operación</option>
-              <option value="Transformación digital">Transformación digital</option>
-              <option value="Otro">Otro</option>
+
+            <select
+              name="Necesidad_Principal"
+              required
+            >
+
+              <option value="">
+                Necesidad principal *
+              </option>
+
+              <option value="Implementar Kommo / CRM">
+                Implementar Kommo / CRM
+              </option>
+
+              <option value="Automatizar procesos">
+                Automatizar procesos
+              </option>
+
+              <option value="Optimizar operación">
+                Optimizar operación
+              </option>
+
+              <option value="Mejorar ventas">
+                Mejorar ventas
+              </option>
+
+              <option value="Transformación digital">
+                Transformación digital
+              </option>
+
+              <option value="Otro">
+                Otro
+              </option>
+
             </select>
 
-            <textarea name="Mensaje" placeholder="Cuéntanos brevemente tu situación u objetivo"></textarea>
 
-            <button type="submit" class="btn btn-primary" id="submitBtn" style="justify-content:center; width:100%;">
+            <textarea
+              name="Mensaje"
+              placeholder="Cuéntanos brevemente tu situación u objetivo"
+            ></textarea>
+
+
+            <button
+              type="submit"
+              class="btn btn-primary"
+              id="submitBtn"
+              style="width:100%;"
+            >
               Quiero mi diagnóstico
             </button>
+
+
+            <div class="privacy-note">
+
+              Al enviar este formulario aceptas que Axioma/Dx
+              utilice tus datos exclusivamente para responder
+              a tu solicitud de contacto.
+
+            </div>
 
           </form>
 
         </div>
 
       </div>
+
     </section>
 
   </main>
 
-  <!-- FOOTER -->
+
+  <!-- =========================
+       FOOTER
+  ========================= -->
+
   <footer>
+
     <div class="container">
 
       <div class="footer-grid">
 
+
         <div class="footer-brand">
-          <a href="#" class="logo" style="color:#fff;">Axioma<span>/Dx</span></a>
-          <p>Consultoría en CRM, automatización y transformación digital para empresas en crecimiento.</p>
+
+          <a
+            href="#inicio"
+            class="logo"
+            style="color:#fff;"
+          >
+            Axioma<span>/Dx</span>
+          </a>
+
+          <p>
+            Consultoría en CRM, Kommo, automatización y
+            transformación digital para empresas en crecimiento.
+          </p>
+
 
           <div class="socials">
-            <a class="social" href="https://www.linkedin.com/in/ganigan/">in</a>
-            <a class="social" href="https://www.instagram.com/axioma.dx/">ig</a>
-            <a class="social" href="#">yt</a>
+
+            <a
+              class="social"
+              href="https://www.linkedin.com/in/ganigan/"
+              target="_blank"
+              rel="noopener"
+              aria-label="LinkedIn"
+            >
+              in
+            </a>
+
+            <a
+              class="social"
+              href="https://www.instagram.com/axioma.dx/"
+              target="_blank"
+              rel="noopener"
+              aria-label="Instagram"
+            >
+              ig
+            </a>
+
+            <a
+              class="social"
+              href="#"
+              aria-label="YouTube"
+            >
+              yt
+            </a>
+
           </div>
+
         </div>
 
-        <div class="footer-col">
-          <h4>Servicios</h4>
-          <a href="#servicios">Implementación CRM</a>
-          <a href="#servicios">Automatización</a>
-          <a href="#servicios">Optimización operativa</a>
-          <a href="#servicios">Transformación digital</a>
-        </div>
 
         <div class="footer-col">
-          <h4>Empresa</h4>
-          <a href="#casos">Casos de éxito</a>
-          <a href="#testimonios">Testimonios</a>
-          <a href="#proceso">Cómo trabajamos</a>
-          <a href="#contacto">Contacto</a>
+
+          <h4>
+            Servicios
+          </h4>
+
+          <a href="#servicios">
+            Implementación CRM
+          </a>
+
+          <a href="#servicios">
+            Automatización
+          </a>
+
+          <a href="#servicios">
+            Optimización operativa
+          </a>
+
+          <a href="#servicios">
+            Transformación digital
+          </a>
+
         </div>
 
-        <div class="footer-col">
-          <h4>Recursos</h4>
-          <a href="#">Guías</a>
-          <a href="#">Checklists</a>
-          <a href="#">Webinars</a>
-          <a href="#">Blog</a>
-        </div>
 
         <div class="footer-col">
-          <h4>Hablemos</h4>
-          <a href="mailto:contacto@axiomadx.com">contacto@axiomadx.com</a>
-          <a href="tel:+525554005635">+52 555 400 5635</a>
-          <a href="#">Mérida, Yucatán</a>
+
+          <h4>
+            Empresa
+          </h4>
+
+          <a href="#credenciales">
+            Credenciales
+          </a>
+
+          <a href="#casos">
+            Casos de éxito
+          </a>
+
+          <a href="#testimonios">
+            Testimonios
+          </a>
+
+          <a href="#proceso">
+            Cómo trabajamos
+          </a>
+
+        </div>
+
+
+        <div class="footer-col">
+
+          <h4>
+            Recursos
+          </h4>
+
+          <a href="#">
+            Guías
+          </a>
+
+          <a href="#">
+            Checklists
+          </a>
+
+          <a href="#">
+            Webinars
+          </a>
+
+          <a href="#">
+            Blog
+          </a>
+
+        </div>
+
+
+        <div class="footer-col">
+
+          <h4>
+            Hablemos
+          </h4>
+
+          <a href="mailto:contacto@axiomadx.com">
+            contacto@axiomadx.com
+          </a>
+
+          <a href="tel:+525554005635">
+            +52 555 400 5635
+          </a>
+
+          <a href="#">
+            Mérida, Yucatán
+          </a>
+
           <div style="margin-top:1rem;">
-            <a href="#contacto" class="btn btn-primary" style="padding:10px 14px; font-size:.85rem;">Agenda una llamada</a>
+
+            <a
+              href="#contacto"
+              class="btn btn-primary"
+              style="padding:10px 14px;font-size:.85rem;"
+            >
+              Agenda una llamada
+            </a>
+
           </div>
+
         </div>
 
       </div>
 
+
       <div class="footer-bottom">
-        <span>© 2026 Axioma Dx Reg en Tram. Todos los derechos reservados.</span>
-        <span>Aviso de privacidad · Términos y condiciones</span>
+
+        <span>
+          © 2026 Axioma Dx Reg en Tram.
+          Todos los derechos reservados.
+        </span>
+
+        <span>
+          Aviso de privacidad · Términos y condiciones
+        </span>
+
       </div>
 
     </div>
+
   </footer>
 
+
+  <!-- =========================
+       JAVASCRIPT
+  ========================= -->
+
   <script>
-    // Menú móvil
-    const menuBtn = document.getElementById('menuBtn');
-    const navLinks = document.getElementById('navLinks');
+
+    /* =========================
+       MENÚ MÓVIL
+    ========================= */
+
+    const menuBtn =
+      document.getElementById('menuBtn');
+
+    const navLinks =
+      document.getElementById('navLinks');
+
 
     menuBtn.addEventListener('click', () => {
+
       navLinks.classList.toggle('active');
+
     });
 
-    navLinks.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => navLinks.classList.remove('active'));
-    });
 
-    // Envío del formulario con estado "Enviando solicitud..."
-    const leadForm = document.getElementById('leadForm');
-    const submitBtn = document.getElementById('submitBtn');
+    navLinks
+      .querySelectorAll('a')
+      .forEach(link => {
 
-    leadForm.addEventListener('submit', function() {
-      submitBtn.disabled = true;
-      submitBtn.innerText = 'Enviando solicitud...';
-      submitBtn.style.opacity = '0.7';
-    });
+        link.addEventListener('click', () => {
 
-    // Animación simple al hacer scroll
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if(entry.isIntersecting){
-          entry.target.style.opacity = 1;
-          entry.target.style.transform = 'translateY(0)';
-        }
+          navLinks.classList.remove('active');
+
+        });
+
       });
-    }, { threshold: 0.1 });
 
-    document.querySelectorAll('.card,.service,.stat,.step,.case-card,.quote,.testimonial-card').forEach(el => {
-      el.style.opacity = 0;
-      el.style.transform = 'translateY(20px)';
-      el.style.transition = 'all .5s ease';
-      observer.observe(el);
-    });
+
+    /* =========================
+       FORMULARIO
+    ========================= */
+
+    const leadForm =
+      document.getElementById('leadForm');
+
+    const submitBtn =
+      document.getElementById('submitBtn');
+
+
+    leadForm.addEventListener(
+      'submit',
+      function(){
+
+        submitBtn.disabled = true;
+
+        submitBtn.innerText =
+          'Enviando solicitud...';
+
+        submitBtn.style.opacity = '0.7';
+
+      }
+    );
+
+
+    /* =========================
+       ANIMACIONES AL HACER SCROLL
+    ========================= */
+
+    const observer =
+      new IntersectionObserver(
+        (entries) => {
+
+          entries.forEach(entry => {
+
+            if(entry.isIntersecting){
+
+              entry.target.style.opacity = 1;
+
+              entry.target.style.transform =
+                'translateY(0)';
+
+              observer.unobserve(entry.target);
+
+            }
+
+          });
+
+        },
+        {
+          threshold:0.1
+        }
+      );
+
+
+    document
+      .querySelectorAll(
+        '.card,.service,.stat,.step,.case-card,.quote,.testimonial-card,.credential-card,.profile-card'
+      )
+      .forEach(el => {
+
+        el.style.opacity = 0;
+
+        el.style.transform =
+          'translateY(20px)';
+
+        el.style.transition =
+          'all .5s ease';
+
+        observer.observe(el);
+
+      });
+
   </script>
 
 </body>
 </html>
+```
