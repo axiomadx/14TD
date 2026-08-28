@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Blog | Axioma/Dx — CRM, Automatización y Ventas</title>
+
+<meta name="description"
+     content="Ideas, estrategias y consejos sobre CRM, Kommo, automatización comercial, ventas y transformación digital para empresas en crecimiento.">
+
+  <meta name="robots" content="index, follow">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+  <style>
+    :root {
+      --primary:#2563eb;
+      --primary-dark:#1d4ed8;
+      --navy:#0b1f4d;
+      --text:#0f172a;
+      --muted:#64748b;
+      --bg:#f8fafc;
+      --border:#e2e8f0;
+      --white:#fff;
+      --shadow:0 10px 30px rgba(2,6,23,.08);
+    }
+
+    * {
+      box-sizing:border-box;
+    }
+
+    html {
+      scroll-behavior:smooth;
+    }
+
+    body {
+      margin:0;
+      font-family:'Inter',system-ui,sans-serif;
+      color:var(--text);
+      background:#fff;
+      line-height:1.6;
+    }
+
+    .container {
+      width:min(1150px,92%);
+      margin:auto;
+    }
+
+    header {
+      position:sticky;
+      top:0;
+      z-index:1000;
+      background:rgba(255,255,255,.94);
+      backdrop-filter:blur(12px);
+      border-bottom:1px solid var(--border);
+    }
+
+    .nav {
+      min-height:68px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:20px;
+    }
+
+    .logo {
+      color:var(--navy);
+      font-size:1.4rem;
+      font-weight:800;
+      text-decoration:none;
+    }
+
+    .logo span {
+      color:var(--primary);
+    }
+
+    .nav-links {
+      display:flex;
+      gap:24px;
+      align-items:center;
+    }
+
+    .nav-links a {
+      text-decoration:none;
+      color:var(--text);
+      font-size:.92rem;
+      font-weight:500;
+    }
+
+    .nav-links a:hover {
+      color:var(--primary);
+    }
+
+    .btn {
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:11px 18px;
+      border-radius:11px;
+      text-decoration:none;
+      font-weight:600;
+      font-size:.9rem;
+      transition:.2s ease;
+    }
+
+    .btn-primary {
+      background:var(--primary);
+      color:white;
+    }
+
+    .btn-primary:hover {
+      background:var(--primary-dark);
+      transform:translateY(-2px);
+    }
+
+    .hero {
+      background:
+        radial-gradient(circle at 20% 20%,rgba(37,99,235,.10),transparent 35%),
+        linear-gradient(180deg,#fff,#f8fbff);
+      padding:75px 0 65px;
+      text-align:center;
+    }
+
+    .eyebrow {
+      display:inline-flex;
+      padding:6px 12px;
+      border-radius:999px;
+      background:rgba(37,99,235,.08);
+      color:var(--primary);
+      font-weight:700;
+      font-size:.76rem;
+      letter-spacing:.04em;
+      text-transform:uppercase;
+      margin-bottom:15px;
+    }
+
+    .hero h1 {
+      font-size:clamp(2.1rem,5vw,3.5rem);
+      line-height:1.1;
+      letter-spacing:-.03em;
+      margin:0 0 15px;
+    }
+
+    .hero h1 span {
+      color:var(--primary);
+    }
+
+    .hero p {
+      max-width:680px;
+      margin:auto;
+      color:var(--muted);
+      font-size:1.05rem;
+    }
+
+    .blog {
+      padding:65px 0;
+      background:var(--bg);
+    }
+
+    .blog-grid {
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:24px;
+    }
+
+    .post {
+      background:#fff;
+      border:1px solid var(--border);
+      border-radius:20px;
+      overflow:hidden;
+      box-shadow:var(--shadow);
+      transition:.25s ease;
+    }
+
+    .post:hover {
+      transform:translateY(-5px);
+    }
+
+    .post-image {
+      height:210px;
+      overflow:hidden;
+      background:#e2e8f0;
+    }
+
+    .post-image img {
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+      transition:.3s ease;
+    }
+
+    .post:hover img {
+      transform:scale(1.04);
+    }
+
+    .post-content {
+      padding:22px;
+    }
+
+    .category {
+      display:inline-block;
+      color:var(--primary);
+      font-size:.76rem;
+      font-weight:700;
+      text-transform:uppercase;
+      margin-bottom:9px;
+    }
+
+    .post h2 {
+      font-size:1.2rem;
+      line-height:1.3;
+      margin:0 0 10px;
+    }
+
+    .post h2 a {
+      color:var(--text);
+      text-decoration:none;
+    }
+
+    .post h2 a:hover {
+      color:var(--primary);
+    }
+
+    .post p {
+      color:var(--muted);
+      font-size:.9rem;
+      margin:0 0 17px;
+    }
+
+    .post-meta {
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      color:var(--muted);
+      font-size:.78rem;
+      border-top:1px solid var(--border);
+      padding-top:14px;
+    }
+
+    .read {
+      color:var(--primary);
+      font-weight:600;
+      text-decoration:none;
+    }
+
+    .cta {
+      padding:70px 0;
+      background:linear-gradient(135deg,var(--navy),#102a63);
+      color:white;
+      text-align:center;
+    }
+
+    .cta h2 {
+      font-size:clamp(1.8rem,4vw,2.5rem);
+      margin:0 0 10px;
+    }
+
+    .cta p {
+      color:rgba(255,255,255,.78);
+      max-width:600px;
+      margin:0 auto 25px;
+    }
+
+    footer {
+      background:#07152f;
+      color:#94a3b8;
+      padding:30px 0;
+      text-align:center;
+      font-size:.85rem;
+    }
+
+    footer strong {
+      color:#fff;
+    }
+
+    @media(max-width:900px) {
+      .blog-grid {
+        grid-template-columns:repeat(2,1fr);
+      }
+    }
+
+    @media(max-width:650px) {
+      .nav-links {
+        display:none;
+      }
+
+      .nav .btn {
+        display:none;
+      }
+
+      .hero {
+        padding:55px 0 45px;
+      }
+
+      .blog {
+        padding:45px 0;
+      }
+
+      .blog-grid {
+        grid-template-columns:1fr;
+      }
+
+      .post-image {
+        height:220px;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+
+<header>
+  <div class="container nav">
+
+```
+<a href="../index.html" class="logo">
+  Axioma<span>/Dx</span>
+</a>
+
+<nav class="nav-links">
+  <a href="../index.html">Inicio</a>
+  <a href="../index.html#servicios">Servicios</a>
+  <a href="../index.html#casos">Casos de éxito</a>
+  <a href="../index.html#contacto">Contacto</a>
+</nav>
+
+<a href="../index.html#contacto" class="btn btn-primary">
+  Solicitar diagnóstico
+</a>
+```
+
+  </div>
+</header>
+
+<section class="hero">
+
+  <div class="container">
+
+```
+<div class="eyebrow">
+  Axioma/Dx Insights
+</div>
+
+<h1>
+  Ideas para vender mejor con
+  <span>CRM y automatización</span>
+</h1>
+
+<p>
+  Estrategias, consejos y análisis para mejorar ventas,
+  seguimiento comercial, procesos y transformación digital.
+</p>
+```
+
+  </div>
+
+</section>
+
+<section class="blog">
+
+  <div class="container">
+
+```
+<div class="blog-grid">
+
+  <!-- ARTÍCULO 1 -->
+
+  <article class="post">
+
+    <div class="post-image">
+
+      <img
+        src="../assets/blog/kommo.jpg"
+        alt="CRM Kommo para gestión comercial"
+        loading="lazy"
+      >
+
+    </div>
+
+    <div class="post-content">
+
+      <div class="category">
+        CRM
+      </div>
+
+      <h2>
+        <a href="kommo-crm-guia.html">
+          ¿Qué es Kommo y cómo puede ayudarte a vender más?
+        </a>
+      </h2>
+
+      <p>
+        Descubre cómo utilizar un CRM para organizar leads,
+        automatizar seguimiento y mejorar la conversión comercial.
+      </p>
+
+      <div class="post-meta">
+        <span>28 Ago 2026</span>
+
+        <a class="read" href="kommo-crm-guia.html">
+          Leer artículo →
+        </a>
+      </div>
+
+    </div>
+
+  </article>
+
+
+  <!-- ARTÍCULO 2 -->
+
+  <article class="post">
+
+    <div class="post-image">
+
+      <img
+        src="../assets/blog/automatizacion.jpg"
+        alt="Automatización de procesos comerciales"
+        loading="lazy"
+      >
+
+    </div>
+
+    <div class="post-content">
+
+      <div class="category">
+        Automatización
+      </div>
+
+      <h2>
+        <a href="automatizacion-ventas.html">
+          5 procesos comerciales que deberías automatizar
+        </a>
+      </h2>
+
+      <p>
+        Identifica las tareas repetitivas que están consumiendo
+        tiempo de tu equipo comercial.
+      </p>
+
+      <div class="post-meta">
+        <span>Próximamente</span>
+
+        <a class="read" href="automatizacion-ventas.html">
+          Leer artículo →
+        </a>
+      </div>
+
+    </div>
+
+  </article>
+
+
+  <!-- ARTÍCULO 3 -->
+
+  <article class="post">
+
+    <div class="post-image">
+
+      <img
+        src="../assets/blog/ventas.jpg"
+        alt="Seguimiento de leads y ventas"
+        loading="lazy"
+      >
+
+    </div>
+
+    <div class="post-content">
+
+      <div class="category">
+        Ventas
+      </div>
+
+      <h2>
+        <a href="seguimiento-leads.html">
+          ¿Cuántos leads estás perdiendo por falta de seguimiento?
+        </a>
+      </h2>
+
+      <p>
+        Cómo detectar fugas en tu proceso comercial y construir
+        un sistema de seguimiento que no dependa de la memoria.
+      </p>
+
+      <div class="post-meta">
+        <span>Próximamente</span>
+
+        <a class="read" href="seguimiento-leads.html">
+          Leer artículo →
+        </a>
+      </div>
+
+    </div>
+
+  </article>
+
+</div>
+```
+
+  </div>
+
+</section>
+
+<section class="cta">
+
+  <div class="container">
+
+```
+<h2>
+  ¿Quieres mejorar tu proceso comercial?
+</h2>
+
+<p>
+  Analizamos tu operación y te ayudamos a identificar
+  oportunidades de CRM, automatización y mejora comercial.
+</p>
+
+<a href="../index.html#contacto" class="btn btn-primary">
+  Solicitar diagnóstico
+</a>
+```
+
+  </div>
+
+</section>
+
+<footer>
+
+  <div class="container">
+
+```
+<strong>Axioma/Dx</strong>
+
+· CRM · Automatización · Transformación Digital
+
+<br><br>
+
+© 2026 Axioma/Dx. Todos los derechos reservados.
+```
+
+  </div>
+
+</footer>
+
+</body>
+</html>
